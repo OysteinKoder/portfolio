@@ -1,31 +1,265 @@
 body {
-  height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  font-family: 'Bitter', serif;
+  font-family: "Bitter", serif;
+  background-color: rgb(228, 241, 253);
+  color: #0f1b61;
 }
-
 .Header-box {
   display: flex;
   justify-content: space-evenly;
   margin: auto;
   align-items: center;
   margin-top: 10vh;
-  background-color: whitesmoke;
+  background-color: rgb(255, 255, 255);
   width: 90vw;
+  min-height: 40vh;
+}
+
+.Header-box:hover {
+  transition-duration: 300ms;
+  transform: scale(1.01)
 }
 
 .Profile-pic {
-  height: 40vh;
+  height: 37vh;
   border-radius: 50%;
+  border: solid rgb(228, 241, 253) 3em;
+}
+
+.Profile-pic:hover {
+ transition-duration: 300ms;
+
+}
+
+.Component-spacing {
+  margin-top: 10vh;
+}
+
+.Component-spacing:hover {
+  transition-duration: 300ms;
+  transform: scale(1.01)
+}
+
+.White-box {
+  display: flex;
+  /* background-color: white; */
+  width: 90vw;
+  margin: auto;
 }
 
 h1 {
   font-size: 4rem;
 }
 
-h3 {
-  font-size: 1.5rem;
+h2 {
+  font-size: 2.5rem;
+  text-align: left;
+  margin-left: 20vw;
 }
+
+h3 {
+  font-size: 2rem;
+}
+
+.Grid {
+  text-align: center;
+  display: grid;
+  width: 90vw;
+  grid-template-columns: 15.5vw 5vw 1fr 1fr 1fr;
+  grid-template-rows: 5vh 6vw 6vw 6vw 6vw;
+  grid-template-areas: 
+  "... ... beginner junior senior"
+  "... html htmlBar htmlBar ..."
+  "... css cssBar cssBar ..."
+  "... js jsBar jsBar ..."
+  "... figma figmaBar figmaBar ..."
+}
+
+.Beginner {
+  grid-area: beginner;
+}
+
+.Junior {
+  grid-area: junior;
+}
+
+.Senior {
+  grid-area: senior;
+}
+
+.Html-icon {
+  grid-area: html;
+  background-image: url("./img/html.png");
+  background-size:cover;
+}
+
+.Css-icon {
+  grid-area: css;
+  background-image: url("./img/cssIcon.png");
+  background-size: 100%;
+}
+
+.Js-icon {
+  grid-area: js;
+  background-image: url("./img/jsIcon.png");
+  background-size: 100%;
+}
+
+.Figma-icon {
+  grid-area: figma;
+  background-image: url("./img/figmaIcon.png");
+  background-size: 100%;
+}
+
+.Html-bar {
+  grid-area: htmlBar;
+  background-color: #1da0f1;
+  margin: 3vh;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  width: 5vw;
+  animation-delay: 4s;
+  animation-name: barGrowHtml;
+  animation-duration: 2.4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes barGrowHtml {
+  from {
+    width: 5vw
+  }
+  to {
+    width: 35vw
+  }
+}
+
+.Css-bar {
+  grid-area: cssBar;
+  background-color: #1da0f1;
+  margin: 3vh;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  width: 5vw;
+  animation-delay: 4s;
+  animation-name: barGrowCss;
+  animation-duration: 2.7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes barGrowCss {
+  from {
+    width: 5vw
+  }
+  to {
+    width: 38vw
+  }
+}
+
+.Js-bar {
+  grid-area: jsBar;
+  background-color: #1da0f1;
+  margin: 3vh;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  width: 5vw;
+  animation-name: barGrowJs;
+  animation-delay: 4s;
+  animation-duration: 2.6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes barGrowJs {
+  from {
+    width: 5vw
+  }
+  to {
+    width: 30vw
+  }
+}
+
+
+.Figma-bar {
+  grid-area: figmaBar;
+  background-color: #1da0f1;
+  margin: 3vh;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  width: 5vw;
+  animation-delay: 4s;
+  animation-name: barGrowCss;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.Header-text1 {
+  animation-name: text1;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes text1 {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.Header-text2 {
+  animation-name: text2;
+  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+@keyframes text2 {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.Pic-animation {
+  animation-name: spinAppear;
+  animation-delay: 3s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+
+
+
+@keyframes spinAppear {
+  from { 
+    opacity: 0%;
+  }
+  to {
+    opacity:100%;
+  }
+}
+
+.Skills-animation {
+  animation-name: Skills;
+  animation-delay: 4s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+@keyframes Skills {
+  from { 
+    opacity: 0%;
+  }
+  to {
+    opacity:100%;
+  }
+}
+
+

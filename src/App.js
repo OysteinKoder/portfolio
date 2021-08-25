@@ -7,14 +7,15 @@ import {
   Link
 } from "react-router-dom";
 import Header from "./components/header"
+import Skills from "./components/skills"
+import Projects from "./components/projects"
 
 function App() {
   return (
     <Router>
 <Header></Header>
-      <Switch>
-
-      </Switch>
+      <Skills></Skills>
+      <Projects></Projects>
     </Router>
   );
 }
