@@ -262,4 +262,32 @@ h3 {
   }
 }
 
+.Grid-project {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "projectImg projectH2"
+  "projectImg projectP"
+  "projectImg projectLink"
+}
+
+.Project-img {
+  background-image: url("./img/ChildBooksOnline.jpg");
+}
+
+.Project-h2 {
+  grid-area: projectH2;
+}
+
+.Project-p {
+  grid-area: projectP;
+}
+
+.Project-link {
+  grid-area: projectLink;
+}
+
+
 
