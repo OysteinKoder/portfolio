@@ -1,14 +1,16 @@
 import React from "react"
+import {ReactComponent as QuestionSvg} from "../img/question.svg"
 
 function Skills() {
     return (
         <div className="Component-spacing Skills-animation">
             <h2>Skills</h2>
-            <div className="White-box">
+            <div className="box">
                 <div className="Grid">
-                    <div className="Beginner"> <h3>Beginner</h3></div>
-                    <div className="Junior">  <h3>Junior</h3></div>
-                    <div className="Senior">  <h3>Senior</h3></div>
+                    <div className="Novice"> <h3>Novice <QuestionSvg class="Svg"></QuestionSvg></h3></div>
+                    <div className="Junior">  <h3>Junior <QuestionSvg class="Svg"></QuestionSvg></h3></div>
+                    <div className="Professional">  <h3>Professional <QuestionSvg class="Svg"></QuestionSvg></h3></div>
+                    <div className="Expert">  <h3>Expert <QuestionSvg class="Svg"></QuestionSvg></h3></div>
                     <div className="Html-icon"></div>
                     <div className="Css-icon"></div>
                     <div className="Js-icon"></div>

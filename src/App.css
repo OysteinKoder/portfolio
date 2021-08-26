@@ -43,11 +43,17 @@ body {
   transform: scale(1.01)
 }
 
-.White-box {
+.box {
   display: flex;
-  /* background-color: white; */
   width: 90vw;
   margin: auto;
+}
+
+.White-box {
+  display: flex;
+  background-color: white;
+  margin: auto;
+  width: fit-content;
 }
 
 h1 {
@@ -65,29 +71,39 @@ h3 {
 }
 
 .Grid {
-  text-align: center;
   display: grid;
+  text-align: center;
   width: 90vw;
-  grid-template-columns: 15.5vw 5vw 1fr 1fr 1fr;
+  grid-template-columns: 15.5vw 5vw 1fr 1fr 1fr 1fr;
   grid-template-rows: 5vh 6vw 6vw 6vw 6vw;
   grid-template-areas: 
-  "... ... beginner junior senior"
-  "... html htmlBar htmlBar ..."
-  "... css cssBar cssBar ..."
-  "... js jsBar jsBar ..."
-  "... figma figmaBar figmaBar ..."
+  "... ... novice junior professional expert"
+  "... html htmlBar htmlBar htmlBar ..."
+  "... css cssBar cssBar cssBar ..."
+  "... js jsBar jsBar jsBar..."
+  "... figma figmaBar figmaBar figmaBar..."
 }
 
-.Beginner {
-  grid-area: beginner;
+.Novice {
+  grid-area: novice;
 }
 
 .Junior {
   grid-area: junior;
 }
 
-.Senior {
-  grid-area: senior;
+.Svg {
+  fill: grey;
+  line-height: normal;
+  vertical-align: middle;
+}
+
+.Professional {
+  grid-area: professional;
+}
+
+.Expert {
+  grid-area: expert;
 }
 
 .Html-icon {
@@ -132,7 +148,7 @@ h3 {
     width: 5vw
   }
   to {
-    width: 35vw
+    width: 40vw
   }
 }
 
@@ -143,9 +159,9 @@ h3 {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   width: 5vw;
-  animation-delay: 4s;
+  animation-delay: 4.5s;
   animation-name: barGrowCss;
-  animation-duration: 2.7s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
 }
 
@@ -154,7 +170,7 @@ h3 {
     width: 5vw
   }
   to {
-    width: 38vw
+    width: 33vw
   }
 }
 
@@ -166,8 +182,8 @@ h3 {
   border-bottom-right-radius: 25px;
   width: 5vw;
   animation-name: barGrowJs;
-  animation-delay: 4s;
-  animation-duration: 2.6s;
+  animation-delay: 5s;
+  animation-duration: 3.3s;
   animation-fill-mode: forwards;
 }
 
@@ -176,7 +192,7 @@ h3 {
     width: 5vw
   }
   to {
-    width: 30vw
+    width: 26vw
   }
 }
 
@@ -188,11 +204,22 @@ h3 {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   width: 5vw;
-  animation-delay: 4s;
-  animation-name: barGrowCss;
-  animation-duration: 2.5s;
+  animation-delay: 5.5s;
+  animation-name: barGrowFigma;
+  animation-duration: 3.6s;
   animation-fill-mode: forwards;
 }
+
+@keyframes barGrowFigma {
+  from {
+    width: 5vw
+  }
+  to {
+    width: 28vw
+  }
+}
+
+
 
 .Header-text1 {
   animation-name: text1;
@@ -263,26 +290,52 @@ h3 {
 }
 
 .Grid-project {
+  width: 60vw;
   margin: auto;
   display: grid;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: 
-  "projectImg projectH2"
-  "projectImg projectP"
-  "projectImg projectLink"
+  " projectImg  projectH2"
+  " projectImg  projectP"
+  " projectImg  projectLink";
+  height: 50vh;
 }
+
+.Project-h {
+  grid-area: project-h;
+  text-align: left;
+}
+
+.Project-link
+
 
 .Project-img {
   background-image: url("./img/ChildBooksOnline.jpg");
+  background-size: 60% 80%;
+  grid-area: projectImg;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
 }
 
-.Project-h2 {
+.Projects-h2-1 {
+  grid-area: projectH1;
+    font-size: 2.5rem;
+    text-align: left;
+}
+
+.Project-h2-2 {
   grid-area: projectH2;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 .Project-p {
   grid-area: projectP;
+  font-size: 1.5rem;
 }
 
 .Project-link {
