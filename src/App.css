@@ -5,7 +5,9 @@ body {
   margin: 0 auto;
   font-family: "Bitter", serif;
   background-color: rgb(228, 241, 253);
+  background: linear-gradient(90deg, rgba(160,229,255,1) 34%, rgba(0,212,255,1) 100%);
   color: #0f1b61;
+  backdrop-filter: blur(10px);
 }
 .Header-box {
   display: flex;
@@ -13,9 +15,15 @@ body {
   margin: auto;
   align-items: center;
   margin-top: 10vh;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.445);
   width: 90vw;
   min-height: 40vh;
+  border-radius: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: #0f1b61;
 }
 
 .Header-box:hover {
@@ -26,12 +34,13 @@ body {
 .Profile-pic {
   height: 37vh;
   border-radius: 50%;
-  border: solid rgb(228, 241, 253) 3em;
+  border: solid rgba(228, 241, 253, 0) 3em;
+  /* z-index: -1;
+  backdrop-filter: blur(60px); */
 }
 
 .Profile-pic:hover {
  transition-duration: 300ms;
-
 }
 
 .Component-spacing {
@@ -51,9 +60,12 @@ body {
 
 .White-box {
   display: flex;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.39);
   margin: auto;
-  width: fit-content;
+  width: 90vw;
+  backdrop-filter: blur(30px);
+  
+  border-radius: 25px;
 }
 
 h1 {
@@ -290,18 +302,19 @@ h3 {
 }
 
 .Grid-project {
+  display: grid;
   width: 60vw;
   margin: auto;
-  display: grid;
-  justify-content: center;
-  align-items: center;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: 
-  " projectImg  projectH2"
-  " projectImg  projectP"
-  " projectImg  projectLink";
+  "projectImg  projectH2"
+  "projectImg  projectP"
+  "projectImg  projectLink";
   height: 50vh;
+  justify-content: center;
+  align-items: center;
+  color:#0f1b61;
 }
 
 .Project-h {
@@ -309,16 +322,14 @@ h3 {
   text-align: left;
 }
 
-.Project-link
-
-
-.Project-img {
+.Child-books-online-img {
   background-image: url("./img/ChildBooksOnline.jpg");
   background-size: 60% 80%;
   grid-area: projectImg;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
   height: 100%;
+  width: 100%;
 }
 
 .Projects-h2-1 {
@@ -340,6 +351,18 @@ h3 {
 
 .Project-link {
   grid-area: projectLink;
+  height: 30%;
+  width: 20%;
+  background-color:#1da0f1;
+  border-radius: 25px;
+  border-style: none;
+  color: white;
+  font-size: 1.5rem;
+  margin: auto;
+}
+
+.Project-link:hover {
+  transform: scale(1.2)
 }
 
 
