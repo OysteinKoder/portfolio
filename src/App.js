@@ -1,10 +1,9 @@
-import logo from './logo.svg';
+// eslint-disable-next-line
+import logo from './logo.svg'; 
 import './App.css';
+// eslint-disable-next-line
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+  BrowserRouter as Router, Switch, Route, Link
 } from "react-router-dom";
 import Header from "./components/header"
 import Skills from "./components/skills"
@@ -16,9 +15,7 @@ function App() {
       <Header></Header>
       <Skills></Skills>
       <Projects
-        description="Child Books Online is a fun and interactive app that i am developing for mobile and pads.
-                        When ready it will be released on google play and apple store. 
-                        The goal is to provide parents with an interactive and fun way to teach their kids new words and basic smart-device use. And all of this for a much cheaper price then buying picture books. This is a work in progress."
+        description="Child Books Online is a fun and interactive picture book for children"
 
         title="Child Books Online"
         imgClass="Child-books-online-img"

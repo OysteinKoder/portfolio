@@ -14,8 +14,7 @@ I'm a <b>junior front end developer</b> <br></br> from Bergen, Norway.
 </div>
 
 
-<img src={ProfilePic} className="Profile-pic Pic-animation"></img>
-
+<img src={ProfilePic} alt="profile ca 30 year old handsome man" className="Profile-pic Pic-animation"></img>
         </div>
     )
 }

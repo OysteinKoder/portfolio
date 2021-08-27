@@ -1,5 +1,4 @@
 import React from "react"
-import ChildBookImg from "../img/ChildBooksOnline.jpg"
 
 function Projects(props) {
     return (
@@ -12,11 +11,10 @@ function Projects(props) {
                     <div className="Project-p"> 
                         {props.description}
                     </div>
-                    <button className="Project-link"> <a href={props.link}>Click</a></button>
+                    <a href={props.link} className="Project-link">Click</a>
                 </div>
             </div>
         </div>
     )
 }
-
 export default Projects
