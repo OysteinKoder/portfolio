@@ -22,7 +22,6 @@ h1 {
 h2 {
   font-size: 2rem;
   text-align: left;
-  margin-left: 20vw;
 }
 
 h3 {
@@ -37,7 +36,7 @@ h3 {
   justify-content: space-evenly;
   margin: auto;
   align-items: center;
-  margin-top: 5%;
+  margin-top: 4em;
   background-color: rgba(255, 255, 255, 0.445);
   width: 90vw;
   border-radius: 25px;
@@ -52,7 +51,8 @@ h3 {
   transform: scale(1.01)
 }
 .Profile-pic {
-  height: 15rem;
+  height: 25vh;
+  width: auto;
   border-radius: 50%;
   border: solid rgba(228, 241, 253, 0) 0em;
   padding: 0;
@@ -62,13 +62,13 @@ h3 {
 }
 
 .Header-text1 {
-  animation-name: text1;
+  animation-name: opacity;
   animation-duration: 5s;
   animation-fill-mode: forwards;
   margin: 0;
 }
 
-@keyframes text1 {
+@keyframes opacity {
   from {
     opacity: 0%;
   }
@@ -78,7 +78,7 @@ h3 {
 }
 
 .Header-text2 {
-  animation-name: text2;
+  animation-name: opacity;
   animation-delay: 1s;
   animation-duration: 3s;
   animation-fill-mode: forwards;
@@ -95,98 +95,140 @@ h3 {
   }
 }
 
-.Component-spacing {
-  margin-top: 3%;
+.White-line {
+  /* border-top: solid white 5px; */
+  background-color: white;
+  height: 0.2vh;
+  margin: auto;
+  margin-top: 4em;
+  width: 60vw;
+  opacity: 50%;
 }
 
-.box {
-  display: flex;
+.Component-spacing {
+  margin: auto;
+  margin-top: 4em;
+  width: 60vw;
+  opacity: 50%;
+}
+
+/* .box {
   width: 90vw;
   margin: auto;
-}
+  
+} */
 
 .White-box {
   display: flex;
   background-color: rgba(255, 255, 255, 0.39);
   margin: auto;
-  width: 90vw;
+  width: 80vw;
   backdrop-filter: blur(30px);
   border-radius: 25px;
+  margin-top: 3em;
+}
+
+/* Skills */
+
+.Skill-component {
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-delay:2s;
+  opacity: 0%;
+  animation-fill-mode: forwards;
+}
+
+.H2-headline{
+  text-align: center;
+  border-bottom: rgba(255, 255, 255, 0.363) dotted 0.4em;;
+  width: 80vw;
+  margin: auto;
+  padding: 0.5em;
 }
 
 .Grid {
   display: grid;
-  text-align: center;
   width: 90vw;
-  grid-template-columns: 3.5vw 1fr 1fr 1fr 1fr;
-  grid-template-rows: 5vh 5vw 5vw 5vw 5vw;
+  grid-template-columns: 10% 1fr 1fr 1fr 1fr;
+  grid-template-rows:  repeat(5,20%);
+  /* fr causes overflow for some reason  */
   grid-template-areas: 
   "... novice junior professional expert"
-  " html htmlBar htmlBar htmlBar ..."
-  " css cssBar cssBar cssBar ..."
-  " js jsBar jsBar jsBar..."
-  " figma figmaBar figmaBar figmaBar...";
+  " html htmlBar htmlBar htmlBar htmlBar"
+  " css cssBar cssBar cssBar cssBar"
+  " js jsBar jsBar jsBar jsBar"
+  " figma figmaBar figmaBar figmaBar figmaBar";
   margin: auto;
+  margin-bottom: 0;
+  max-height: 30vh;
 }
 
 .Novice {
   grid-area: novice;
-  margin: 0;
+  margin: auto;
 }
 
 .Junior {
   grid-area: junior;
-  margin: 0;
+  margin: auto;
 }
 
 .Svg {
-  fill: grey;
+  fill: #0f1b61;
   line-height: normal;
   vertical-align: middle;
 }
 
 .Professional {
   grid-area: professional;
-  margin: 0;
+  margin: auto;
 }
 
 .Expert {
   grid-area: expert;
-  margin: 0;
+  margin: auto;
 }
 
 .Html-icon {
   grid-area: html;
-  background-image: url("./img/html.png");
-  background-size:cover;
+  height: 100%;
+  object-fit: cover;
+  margin: auto;
+  
 }
 
 .Css-icon {
   grid-area: css;
-  background-image: url("./img/cssIcon.png");
-  background-size: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: auto;
+  
 }
 
 .Js-icon {
   grid-area: js;
-  background-image: url("./img/jsIcon.png");
-  background-size: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: auto;
+  
 }
 
 .Figma-icon {
   grid-area: figma;
-  background-image: url("./img/figmaIcon.png");
-  background-size: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: auto;
+  
 }
 
 .Html-bar {
   grid-area: htmlBar;
   background-color: #1da0f1;
-  margin: 1.4%;
+  margin: 1.4em;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   width: 5vw;
-  animation-delay: 4s;
+  animation-delay: 2.7s;
   animation-name: barGrowHtml;
   animation-duration: 2.4s;
   animation-fill-mode: forwards;
@@ -204,11 +246,11 @@ h3 {
 .Css-bar {
   grid-area: cssBar;
   background-color: #1da0f1;
-  margin: 1.4%;
+  margin: 1.4em;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   width: 5vw;
-  animation-delay: 4.5s;
+  animation-delay: 2.9s;
   animation-name: barGrowCss;
   animation-duration: 3s;
   animation-fill-mode: forwards;
@@ -226,12 +268,12 @@ h3 {
 .Js-bar {
   grid-area: jsBar;
   background-color: #1da0f1;
-  margin: 1.4%;
+  margin: 1.4em;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   width: 5vw;
   animation-name: barGrowJs;
-  animation-delay: 5s;
+  animation-delay: 3.1s;
   animation-duration: 3.3s;
   animation-fill-mode: forwards;
 }
@@ -245,15 +287,14 @@ h3 {
   }
 }
 
-
 .Figma-bar {
   grid-area: figmaBar;
   background-color: #1da0f1;
-  margin: 1.4%;
+  margin: 1.4em;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   width: 5vw;
-  animation-delay: 5.5s;
+  animation-delay: 3.3s;
   animation-name: barGrowFigma;
   animation-duration: 3.6s;
   animation-fill-mode: forwards;
@@ -270,7 +311,7 @@ h3 {
 
 .Pic-animation {
   animation-name: spinAppear;
-  animation-delay: 3s;
+  animation-delay: 2s;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   opacity: 0%;
@@ -287,7 +328,7 @@ h3 {
 
 .Skills-animation {
   animation-name: Skills;
-  animation-delay: 4s;
+  animation-delay: 2.5s;
   animation-duration: 2s;
   animation-fill-mode: forwards;
   opacity: 0%;
@@ -301,20 +342,45 @@ h3 {
   }
 }
 
+
+.Project-component{
+  opacity: 0%;
+  animation-name: opacity;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+}
+
 .Grid-project {
   display: grid;
   width: 90vw;
   margin: auto;
-  min-height: 30vh;
-  grid-template-columns: .7fr 2fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr;
   grid-template-areas: 
-  "projectImg  projectH2"
-  "projectImg  projectP"
-  "projectImg  projectLink";
-  justify-content: center;
-  align-items: center;
+  "... projectH2 ..."
+  "lefty projectImg righty"
+  "... projectLink ...";
   color:#0f1b61;
+  margin-top:2em;
+  align-items: center;
+}
+
+.Swipe-arrow-left {
+  grid-area: lefty;
+  height: 100%;
+  width: 100%;
+  fill: #0f1b61;
+  transform: scaleX(-1);
+  margin: auto;
+}
+
+.Swipe-arrow-right {
+  grid-area: righty;
+  margin: auto;
+  fill: #0f1b61;
+  height: 100%;
+  width: 100%;
 }
 
 .Project-h {
@@ -323,13 +389,13 @@ h3 {
 }
 
 .Child-books-online-img {
-  background-image: url("./img/ChildBooksOnline.jpg");
-  background-size: 60% 80%;
   grid-area: projectImg;
-  background-repeat: no-repeat;
-  margin: auto;
-  height: 100%;
-  width: 100%;
+  object-fit: cover;
+  width: 50%;
+  justify-self: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 10%;
 }
 
 .Projects-h2-1 {
@@ -342,17 +408,20 @@ h3 {
   grid-area: projectH2;
     font-size: 2.5rem;
     text-align: center;
+    margin: 0;
 }
 
 .Project-p {
   grid-area: projectP;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-align: center;
+  padding: 0.5em;
 }
 
 .Project-link {
   grid-area: projectLink;
   text-align: center;
+  vertical-align: middle;
   height: 30%;
   width: 20%;
   background-color:#1da0f1;
@@ -360,8 +429,8 @@ h3 {
   border-style: none;
   color: white;
   font-size: 1.5rem;
-  margin: auto;
-  padding: 1em;
+  margin: 0 auto;
+  padding: 0.5em;
 }
 
 .Project-link:hover {
@@ -379,7 +448,7 @@ h3 {
 }
 
 .Profile-pic {
-  height: 10vh;
+  height: 12vh;
   padding: 0em;
   margin: 0em;
 }

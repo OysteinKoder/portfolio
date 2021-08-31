@@ -8,6 +8,7 @@ import {
 import Header from "./components/header"
 import Skills from "./components/skills"
 import Projects from "./components/projects"
+import ChildBookImg from "./img/ChildBooksOnline.jpg"
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
 
         title="Child Books Online"
         imgClass="Child-books-online-img"
-        link="https://oysteinkoder.github.io/child_books_online/Animals">
+        link="https://oysteinkoder.github.io/child_books_online/Animals"
+        img={ChildBookImg}>
 
       </Projects>
     </Router>
