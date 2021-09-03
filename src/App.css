@@ -112,11 +112,6 @@ h3 {
   opacity: 50%;
 }
 
-/* .box {
-  width: 90vw;
-  margin: auto;
-  
-} */
 
 .White-box {
   display: flex;
@@ -325,6 +320,21 @@ h3 {
   opacity: 0%;
 }
 
+.Explain {
+  background-color: rgba(255, 255, 255, 0.445);
+  width: 50%;
+  margin: auto;
+  font-size: 2rem;
+  border-radius: 25px;
+  padding: 1em;
+  display: none;
+}
+
+.Explain-hover-show {
+  display:block;
+}
+
+/* Project components */
 .Project-component{
   opacity: 0%;
   animation-name: opacity;
