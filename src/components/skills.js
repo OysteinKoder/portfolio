@@ -14,7 +14,7 @@ function Skills() {
         </div>
             <h2 className="H2-headline">Skills</h2>
                 <div className="Grid Skills-animation">
-                    <h3 className="Novice" onClick={test}>Novice <QuestionSvg class="Svg"></QuestionSvg></h3>
+                    <h3 className="Novice" onClick={noviceShow}>Novice <QuestionSvg class="Svg"></QuestionSvg></h3>
                     <h3 className="Junior">Junior <QuestionSvg class="Svg"></QuestionSvg></h3>
                     <h3 className="Professional">Pro <QuestionSvg class="Svg"></QuestionSvg></h3>
                     <h3 className="Expert">Expert <QuestionSvg class="Svg"></QuestionSvg></h3>
