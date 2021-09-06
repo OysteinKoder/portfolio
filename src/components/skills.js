@@ -39,7 +39,7 @@ let noviceSwitch = false
 
 function noviceShow() {
     console.log("Hello")
-if (noviceSwitch === false &&) {
+if (noviceSwitch === false) {
     novice.classList.add("Explain-show")
 }
 else {
