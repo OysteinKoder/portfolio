@@ -330,7 +330,7 @@ h3 {
   display: none;
 }
 
-.Explain-hover-show {
+.Explain-show {
   display:block;
 }
 
@@ -436,8 +436,16 @@ h3 {
 }
 
 @media only screen and (max-width: 1200px) {
-html {
-  /* all: initial; */
-}
+ 
+  .Child-books-online-img {
+    grid-area: projectImg;
+    object-fit: cover;
+    width: 50%;
+    justify-self: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 10%;
+  }
+
 }
 

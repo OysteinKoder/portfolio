@@ -5,7 +5,6 @@ import CssIcon from "../img/cssIcon.png"
 import JsIcon from "../img/jsIcon.png"
 import FigmaIcon from "../img/figmaIcon.png"
 
-const Novice = document.getElementById("Novice")
 
 function Skills() {
     return ( 
@@ -27,19 +26,26 @@ function Skills() {
                     <div className="Js-bar"></div>
                     <div className="Figma-bar"></div>
         </div>
-        <div className="Explain Novice-explain" onClick={noviceShow}> Has some knowlage but always needs guidence</div>
+        <div className="Explain Novice-explain" onClick={noviceShow} id="novice"> Has some knowlage but needs constant guidence</div>
         <div className="Explain Junior-explain"> Can work independantly but needs the occational guidence</div>
         <div className="Explain Pro-explain"> Has loads of experiance and rearly needs any help</div>
-        <div className="Explain Expert-explain"> Can work independantly but needs the occational guidence</div>
+        <div className="Explain Expert-explain"> The guy who gives guidence</div>
             </div>
     )
 }
 
+const novice = document.getElementById("novice")
+let noviceSwitch = false
+
 function noviceShow() {
-    let noviceClicked 
-    if (Novice.click) {
-        console.log("turtle")
-    }
+    console.log("Hello")
+if (noviceSwitch === false &&) {
+    novice.classList.add("Explain-show")
 }
+else {
+    novice.classList.remove("Explain-show")
+}
+noviceSwitch = !noviceSwitch
+    }
 
 export default Skills
