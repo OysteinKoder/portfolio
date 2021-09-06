@@ -51,11 +51,11 @@ h3 {
   transform: scale(1.01)
 }
 .Profile-pic {
-  height: 25vh;
+  height: 18vh;
   width: auto;
   border-radius: 50%;
   border: solid rgba(228, 241, 253, 0) 0em;
-  padding: 0;
+  padding: 1em;
 }
 .Profile-pic:hover {
  transition-duration: 300ms;
@@ -156,6 +156,7 @@ h3 {
   margin: auto;
   margin-bottom: 0;
   max-height: 30vh;
+  gap: 1em;
 }
 
 .Novice {
@@ -328,6 +329,8 @@ h3 {
   border-radius: 25px;
   padding: 1em;
   display: none;
+  text-align: center;
+  margin-top: 2em;
 }
 
 .Explain-show {
@@ -356,6 +359,7 @@ h3 {
   color:#0f1b61;
   margin-top:2em;
   align-items: center;
+  
 }
 
 .Swipe-arrow-left {
@@ -446,6 +450,15 @@ h3 {
     padding-bottom: 1em;
     border-radius: 10%;
   }
-
+.Header-box {
+  /* background-color: transparent; */
+  display:flex;
+  flex-direction: column-reverse;
+  width: fit-content;
+  padding: 1em;
+}
+.Profile-pic {
+  animation-delay: 0ms;
+}
 }
 

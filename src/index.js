@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// eslint-disable-next-line
 import {HashRouter, HashRouter as Router} from "react-router-dom"
 
 ReactDOM.render(
