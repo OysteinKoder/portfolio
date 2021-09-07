@@ -131,6 +131,7 @@ h3 {
   animation-delay:2s;
   opacity: 0%;
   animation-fill-mode: forwards;
+  height:fit-content;
 }
 
 .H2-headline{
@@ -159,9 +160,33 @@ h3 {
   gap: 1em;
 }
 
-.Novice {
+.Beginner {
   grid-area: novice;
   margin: auto;
+}
+
+.Beginner:hover {
+  transform: scale(1.2);
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+.Arrow-box {
+  text-align: center;
+  margin-top: 9em;
+  margin-left: auto;
+  color:#0f1b6196;
+  cursor: pointer;
+}
+
+.Arrow {
+  margin: auto;
+  transform: scale(1.8);
+  fill:#101c6288;
+}
+
+.Arrow-box:hover {
+  transform: scale(1.2); 
 }
 
 .Novice:hover{
@@ -170,7 +195,7 @@ h3 {
   cursor: pointer;
 }
 
-.Junior {
+.Novice {
   grid-area: junior;
   margin: auto;
 }
@@ -186,21 +211,21 @@ h3 {
   vertical-align: middle;
 }
 
-.Professional {
+.Junior {
   grid-area: professional;
   margin: auto;
 }
-.Professional:hover{
+.Junior:hover{
   transform: scale(1.2);
   text-decoration-line: underline;
   cursor: pointer;
 }
 
-.Expert {
+.Senior {
   grid-area: expert;
   margin: auto;
 }
-.Expert:hover{
+.Senior:hover{
   transform: scale(1.2);
   text-decoration-line: underline;
   cursor: pointer;
@@ -211,7 +236,10 @@ h3 {
   height: 100%;
   object-fit: cover;
   margin: auto;
-  
+}
+
+.Strong-text {
+  font-weight: 1000;
 }
 
 .Css-icon {
@@ -219,7 +247,6 @@ h3 {
   height: 100%;
   object-fit: cover;
   margin: auto;
-  
 }
 
 .Js-icon {

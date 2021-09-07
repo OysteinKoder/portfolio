@@ -6,10 +6,10 @@ function Header() {
         <div className="Header-box">
 <div className="Header-text-box">
     <h1 className="Header-text1">
-Hi, my <br></br> name is <b>Øystein</b>
+Hi, my <br></br> name is <span className="Strong-text">Øystein</span>
     </h1>
     <h3 className="Header-text2">
-I'm a <b>junior front end developer</b> <br></br> from Bergen, Norway.
+I'm a <b><span className="Strong-text"> frontend developer </span></b> <br></br> from <span className="Strong-text">Bergen </span>, Norway.
     </h3>
 </div>
 
