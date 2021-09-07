@@ -164,9 +164,20 @@ h3 {
   margin: auto;
 }
 
+.Novice:hover{
+  transform: scale(1.2);
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
 .Junior {
   grid-area: junior;
   margin: auto;
+}
+.Junior:hover{
+  transform: scale(1.2);
+  text-decoration-line: underline;
+  cursor: pointer;
 }
 
 .Svg {
@@ -179,10 +190,20 @@ h3 {
   grid-area: professional;
   margin: auto;
 }
+.Professional:hover{
+  transform: scale(1.2);
+  text-decoration-line: underline;
+  cursor: pointer;
+}
 
 .Expert {
   grid-area: expert;
   margin: auto;
+}
+.Expert:hover{
+  transform: scale(1.2);
+  text-decoration-line: underline;
+  cursor: pointer;
 }
 
 .Html-icon {
