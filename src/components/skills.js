@@ -15,11 +15,11 @@ function Skills() {
         <div className="Skill-component">
             <div className="Component-spacing">
             </div>
-            <h2 className="H2-headline">Skills</h2>
+            <h2 className="H2-headline">Ferdigheter</h2>
             <div className="Grid Skills-animation">
-                <h3 className="Beginner" onClick={noviceShow}>Beginner <QuestionSvg className="Svg"></QuestionSvg></h3>
-                <h3 className="Novice" onClick={juniorShow}>Novice <QuestionSvg className="Svg"></QuestionSvg></h3>
-                <h3 className="Junior" onClick={proShow} >Junior <QuestionSvg className="Svg"></QuestionSvg></h3>
+                <h3 className="Beginner" onClick={noviceShow}>Amatør <QuestionSvg className="Svg"></QuestionSvg></h3>
+                <h3 className="Novice" onClick={juniorShow}> Dreven <QuestionSvg className="Svg"></QuestionSvg></h3>
+                <h3 className="Junior" onClick={proShow} >junior <QuestionSvg className="Svg"></QuestionSvg></h3>
                 <h3 className="Senior" onClick={expertShow}>Senior <QuestionSvg className="Svg"></QuestionSvg></h3>
                 <img className="Html-icon" src={HtmlIcon} alt="html icon"></img>
                 <img className="Css-icon" src={CssIcon} alt="html icon"></img>
@@ -30,14 +30,14 @@ function Skills() {
                 <div className="Js-bar"></div>
                 <div className="Figma-bar"></div>
             </div>
-            <div className="Explain Beginner-explain" id="beginner"> Barely knows common terminology and consepts, has just started coding</div>
-            <div className="Explain Novice-explain" id="novice"> Can work independantly on most tasks, but needs the occational guidence from an elder when the coding gets too complex</div>
-            <div className="Explain Junior-explain" id="pro"> Knows quite a lot and can work independantly most of the time</div>
-            <div className="Explain Senior-explain" id="expert"> The coding guru who has the answers for all questions asked</div>
+            <div className="Explain Beginner-explain" id="beginner">Kjenner såvidt til teknologien og er helt i begynnerfasen</div>
+            <div className="Explain Novice-explain" id="novice"> Kjenner godt til teknologien og hva man kan gjøre med den, kan arbeide selvstendig men trenger noe veiledning</div>
+            <div className="Explain Junior-explain" id="pro"> Kan ganske mye, men trenger i blant veiledning</div>
+            <div className="Explain Senior-explain" id="expert"> Personen som gir veiledning</div>
         </div>
 
         <div className="Arrow-box">
-        <h4> <em> Extend skills </em></h4>
+        <h4> <em> Utvid </em></h4>
             <Arrow className="Arrow"> </Arrow>
             </div>
             
