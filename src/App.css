@@ -65,6 +65,10 @@ h3 {
  transition-duration: 300ms;
 }
 
+.Center {
+  justify-content: center;
+}
+
 .Header-text1 {
   animation-name: opacity;
   animation-duration: 5s;
@@ -136,6 +140,10 @@ h3 {
   opacity: 0%;
   animation-fill-mode: forwards;
   height:fit-content;
+}
+
+.Skill-component:hover {
+  transform: scale(1.01)
 }
 
 .H2-headline{
@@ -272,7 +280,7 @@ h3 {
 .Html-bar {
   grid-area: htmlBar;
   background-color: #1da0f1;
-  margin: 1.4em;
+  margin: 0.7em;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   width: 5vw;
@@ -294,7 +302,7 @@ h3 {
 .Css-bar {
   grid-area: cssBar;
   background-color: #1da0f1;
-  margin: 1.4em;
+  margin: 0.7em;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   width: 5vw;
@@ -316,7 +324,7 @@ h3 {
 .Js-bar {
   grid-area: jsBar;
   background-color: #1da0f1;
-  margin: 1.4em;
+  margin: 0.7em;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   width: 5vw;
@@ -338,7 +346,7 @@ h3 {
 .Figma-bar {
   grid-area: figmaBar;
   background-color: #1da0f1;
-  margin: 1.4em;
+  margin: 0.7em;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   width: 5vw;
@@ -358,7 +366,7 @@ h3 {
 }
 
 .About-btn {
-  background-color:#1da0f15d;
+  background-color:#1da0f138;
   text-align: center;
   padding: 2em;
   padding-top:0.5em;
@@ -368,7 +376,7 @@ h3 {
   border-radius: 20px;
   font-weight: 500;
   margin-top: 0em;
-  border: 0.5em solid #64bcf3; 
+  border: 0.5em solid #73c1f1; 
   animation-name: opacity;
   animation-delay: 2200ms;
   animation-duration:800ms;
@@ -382,10 +390,32 @@ h3 {
 }
 
 .About-text {
-  width: 55vw;
+  width: 47vw;
   margin: auto;
-  display: none;
-  padding: 1em;
+  max-height: 0vh;
+  opacity: 0;
+  font-size: 0rem;
+  padding-bottom:1em;
+}
+
+.About-show {
+  animation-name: aboutShow;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  transition-delay: 0ms;
+  transition-duration: 350ms;
+  opacity: 1;
+}
+
+@keyframes aboutShow {
+  from {
+    font-size: 0rem;
+    max-height: 0vh;
+  }
+  to {
+    max-height:100vh;
+    font-size: 1rem;
+  }
 }
 
 .Pic-animation {
@@ -421,6 +451,11 @@ h3 {
 }
 
 /* Project components */
+
+.Prosjekter {
+  margin-top: 5em;
+}
+
 .Project-component{
   opacity: 0%;
   animation-name: opacity;
@@ -429,39 +464,19 @@ h3 {
   animation-duration: 2s;
 }
 
-.Grid-project {
-  display: grid;
-  width: 90vw;
+.Project-component:hover {
+  transform:scale(1.01);
+}
+
+.Flex-project {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
   margin: auto;
-  grid-template-columns: 2fr 6fr 2fr;
-  grid-template-rows: 1fr 4fr 1fr;
-  grid-template-areas: 
-  "... projectH2 ..."
-  "lefty projectImg righty"
-  "... projectLink ...";
   color:#0f1b61;
   margin-top:2em;
   align-items: center;
   
-}
-
-.Swipe-arrow-left {
-  grid-area: lefty;
-  height: 30%;
-  width: 30%;
-  fill: #0f1b61;
-  transform: scaleX(-1);
-  margin: auto;
-  margin-right: 0;
-}
-
-.Swipe-arrow-right {
-  grid-area: righty;
-  margin: auto;
-  margin-left: 0;
-  fill: #0f1b61;
-  height: 30%;
-  width: 30%;
 }
 
 .Project-h {
@@ -469,7 +484,7 @@ h3 {
   text-align: left;
 }
 
-.Child-books-online-img {
+.Project-img {
   grid-area: projectImg;
   object-fit: cover;
   width: 20%;
@@ -532,6 +547,27 @@ h3 {
     padding-top: 1em;
     padding-bottom: 1em;
     border-radius: 10%;
+  }
+
+  .Html-bar{
+    margin: 1.2em;
+  }
+
+  .Css-bar{
+    margin: 1.2em;
+  }
+
+  .Js-bar{
+    margin: 1.2em;
+  }
+
+  .Figma-bar{
+    margin: 1.2em;
+  }
+
+  .About-text {
+    font-size: 1.2rem;
+    padding: 1.5em;
   }
 
 .Header-flex-box {

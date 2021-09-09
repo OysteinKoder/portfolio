@@ -31,8 +31,8 @@ function Skills() {
                 <div className="Figma-bar"></div>
             </div>
             <div className="Explain Beginner-explain" id="beginner">Kjenner såvidt til teknologien og er helt i begynnerfasen</div>
-            <div className="Explain Novice-explain" id="novice"> Kjenner godt til teknologien og hva man kan gjøre med den, kan arbeide selvstendig men trenger noe veiledning</div>
-            <div className="Explain Junior-explain" id="pro"> Kan ganske mye, men trenger i blant veiledning</div>
+            <div className="Explain Novice-explain" id="novice"> Kjenner godt til teknologien og hva man kan gjøre med den. Kan arbeide selvstendig med google som hjelp, men trenger noe veiledning</div>
+            <div className="Explain Junior-explain" id="pro"> Kan ganske mye og trenger mindre veiledning</div>
             <div className="Explain Senior-explain" id="expert"> Personen som gir veiledning</div>
         </div>
 

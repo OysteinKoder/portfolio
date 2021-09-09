@@ -5,23 +5,15 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "./components/header"
 import Skills from "./components/skills"
-import Projects from "./components/projects"
-import ChildBookImg from "./img/ChildBooksOnline.jpg"
+import ChildBooksOnline from "./components/childBooksOnline"
+import ProjectCarousel from './components/projectCarousel';
 
 function App() {
   return (
     <Router>
       <Header></Header>
       <Skills></Skills>
-      <Projects
-        description="Child Books Online is a fun and interactive picture book for children"
-
-        title="Child Books Online"
-        imgClass="Child-books-online-img"
-        link="https://oysteinkoder.github.io/child_books_online/Animals"
-        img={ChildBookImg}>
-
-      </Projects>
+      <ProjectCarousel></ProjectCarousel>
     </Router>
   );
 }
