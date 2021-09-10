@@ -13,48 +13,49 @@ import GimpIcon from "../img/gimpIcon.png"
 function Skills() {
     return (
         <div>
-        <div className="Skill-component">
-            <div className="Component-spacing">
-            </div>
-            <h2 className="H2-headline">Ferdigheter</h2>
-            <div className="Grid Skills-animation">
-                <h3 className="Beginner" onClick={noviceShow}>Amatør <QuestionSvg className="Svg"></QuestionSvg></h3>
-                <h3 className="Novice" onClick={juniorShow}> Dreven <QuestionSvg className="Svg"></QuestionSvg></h3>
-                <h3 className="Junior" onClick={proShow} >junior <QuestionSvg className="Svg"></QuestionSvg></h3>
-                <h3 className="Senior" onClick={expertShow}>Senior <QuestionSvg className="Svg"></QuestionSvg></h3>
-                <img className="Html-icon" src={HtmlIcon} alt="html icon"></img>
-                <img className="Css-icon" src={CssIcon} alt="html icon"></img>
-                <img className="Js-icon" src={JsIcon} alt="html icon"></img>
-                <img className="Figma-icon" src={ReactIcon} alt="html icon"></img>
-                <div className="Html-bar"></div>
-                <div className="Css-bar"></div>
-                <div className="Js-bar"></div>
-                <div className="Figma-bar"></div>
+            <div className="Skill-component">
+                <div className="Component-spacing">
+                </div>
+                <h2 className="H2-headline">Ferdigheter</h2>
+                <div className="Grid Skills-animation">
+                    <h3 className="Beginner" onClick={noviceShow}>Amatør <QuestionSvg className="Svg"></QuestionSvg></h3>
+                    <h3 className="Novice" onClick={juniorShow}> Dreven <QuestionSvg className="Svg"></QuestionSvg></h3>
+                    <h3 className="Junior" onClick={proShow} >junior <QuestionSvg className="Svg"></QuestionSvg></h3>
+                    <h3 className="Senior" onClick={expertShow}>Senior <QuestionSvg className="Svg"></QuestionSvg></h3>
+                    <img className="Html-icon" src={HtmlIcon} alt="html icon"></img>
+                    <img className="Css-icon" src={CssIcon} alt="html icon"></img>
+                    <img className="Js-icon" src={JsIcon} alt="html icon"></img>
+                    <img className="Figma-icon" src={ReactIcon} alt="html icon"></img>
+                    <div className="Html-bar"></div>
+                    <div className="Css-bar"></div>
+                    <div className="Js-bar"></div>
+                    <div className="React-bar"></div>
+                </div>
+
+                <div className="Grid-extend Skills-animation-two">
+                    <img className="Figma-icon" src={FigmaIcon} alt="Figma icon"></img>
+                    <img className="Live-icon" src={AbletonIcon} alt="Ableton live icon"></img>
+                    <img className="Gimp-icon" src={GimpIcon} alt="gimp icon"></img>
+                    <div className="Figma-bar"></div>
+                    <div className="Live-bar"></div>
+                    <div className="Gimp-bar"></div>
+                </div>
+
+                <div className="Explain Beginner-explain" id="beginner">Kjenner såvidt til teknologien og er helt i begynnerfasen</div>
+                <div className="Explain Novice-explain" id="novice"> Kjenner godt til teknologien og hva man kan gjøre med den. Kan arbeide selvstendig med google som hjelp, men trenger noe veiledning</div>
+                <div className="Explain Junior-explain" id="pro"> Kan ganske mye og trenger mindre veiledning</div>
+                <div className="Explain Senior-explain" id="expert"> Personen som gir veiledning</div>
             </div>
 
-            <div className="Grid-extend Skills-animation-two">
-                <img className="Html-icon" src={FigmaIcon} alt="html icon"></img>
-                <img className="Css-icon" src={AbletonIcon} alt="html icon"></img>
-                <img className="Js-icon" src={GimpIcon} alt="html icon"></img>
-                <div className="Figma-bar"></div>
-                <div className="Ableton-bar"></div>
-                <div className="Gimp-bar"></div>
+            <div className="Arrow-box">
+                <h4> <em> Utvid </em></h4>
+                <Arrow className="Arrow"> </Arrow>
             </div>
-
-            <div className="Explain Beginner-explain" id="beginner">Kjenner såvidt til teknologien og er helt i begynnerfasen</div>
-            <div className="Explain Novice-explain" id="novice"> Kjenner godt til teknologien og hva man kan gjøre med den. Kan arbeide selvstendig med google som hjelp, men trenger noe veiledning</div>
-            <div className="Explain Junior-explain" id="pro"> Kan ganske mye og trenger mindre veiledning</div>
-            <div className="Explain Senior-explain" id="expert"> Personen som gir veiledning</div>
-        </div>
-
-        <div className="Arrow-box">
-        <h4> <em> Utvid </em></h4>
-            <Arrow className="Arrow"> </Arrow>
-            </div>
-            
         </div>
     )
 }
+
+
 
 
 let noviceSwitch = false

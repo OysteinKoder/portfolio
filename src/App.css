@@ -269,13 +269,7 @@ h3 {
   
 }
 
-.Figma-icon {
-  grid-area: figma;
-  height: 100%;
-  object-fit: cover;
-  margin: auto;
-  
-}
+
 
 .Html-bar {
   grid-area: htmlBar;
@@ -343,7 +337,7 @@ h3 {
   }
 }
 
-.Figma-bar {
+.React-bar {
   grid-area: figmaBar;
   background-color: #1da0f1;
   margin: 0.7em;
@@ -351,19 +345,12 @@ h3 {
   border-bottom-right-radius: 25px;
   width: 5vw;
   animation-delay: 3.3s;
-  animation-name: barGrowFigma;
+  animation-name: barGrow;
   animation-duration: 3.6s;
   animation-fill-mode: forwards;
 }
 
-@keyframes barGrowFigma {
-  from {
-    width: 5vw
-  }
-  to {
-    width: 29vw
-  }
-}
+
 
 
 
@@ -444,14 +431,92 @@ h3 {
   grid-template-rows:  repeat(3,20%);
   /* fr causes overflow for some reason  */
   grid-template-areas: 
-  " html htmlBar htmlBar htmlBar htmlBar"
-  " css cssBar cssBar cssBar cssBar"
-  " js jsBar jsBar jsBar jsBar";
+  " figma figmaBar figmaBar figmaBar figmaBar"
+  " live liveBar liveBar liveBar liveBar"
+  " gimp gimpBar gimpBar gimpBar gimpBar";
   margin: auto;
   margin-bottom: 0;
   max-height: 30vh;
   gap: 1em;
   margin-top:5em;
+}
+
+.Figma-icon {
+  grid-area: figma;
+  height: 100%;
+  object-fit: cover;
+  margin: auto;
+}
+
+.Figma-bar {
+  grid-area: figmaBar;
+  background-color: #1da0f1;
+  margin: 0.7em;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  width: 5vw;
+  animation-delay: 2.9s;
+  animation-name: barGrow;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.Gimp-icon {
+    grid-area: gimp;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+}
+
+.Gimp-bar {
+  grid-area: gimpBar;
+  background-color: #1da0f1;
+  margin: 0.7em;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  width: 5vw;
+  animation-delay: 2.9s;
+  animation-name: barGrow;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes barGrow {
+  from {
+    width: 5vw
+  }
+  to {
+    width: 29vw
+  }
+}
+
+.Live-icon {
+    grid-area: live;
+    height: 100%;
+    object-fit:contain;
+    margin: auto;
+}
+
+.Live-bar {
+  grid-area: liveBar;
+  background-color: #1da0f1;
+  margin: 0.7em;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  width: 5vw;
+  animation-delay: 2.9s;
+  animation-name: juniorGrow;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes juniorGrow {
+  from {
+    width: 5vw
+  }
+  to {
+    width: 48vw
+  }
 }
 
 .Skills-animation-two {
@@ -589,7 +654,7 @@ h3 {
     margin: 1.2em;
   }
 
-  .Figma-bar{
+  .React-bar{
     margin: 1.2em;
   }
 
@@ -622,3 +687,16 @@ h3 {
 }
 }
 
+.Figma-bar {
+  
+  margin: 1.2em;
+ 
+}
+
+.Gimp-bar {
+  margin: 1.2em;
+}
+
+.Live-bar {
+  margin:1.2em;
+}
