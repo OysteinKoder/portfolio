@@ -1,11 +1,8 @@
-// eslint-disable-next-line
-import logo from './logo.svg';
 import './App.css';
 // eslint-disable-next-line
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "./components/header"
 import Skills from "./components/skills"
-import ChildBooksOnline from "./components/childBooksOnline"
 import ProjectCarousel from './components/projectCarousel';
 
 function App() {

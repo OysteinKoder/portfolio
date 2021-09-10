@@ -7,6 +7,7 @@ import FigmaIcon from "../img/figmaIcon.png"
 import ReactIcon from "../img/React-icon.png"
 import { ReactComponent as Arrow } from "../img/Extendarrow.svg"
 import AbletonIcon from "../img/ableton-icon-0.jpg"
+import GimpIcon from "../img/gimpIcon.png"
 
 
 function Skills() {
@@ -30,6 +31,16 @@ function Skills() {
                 <div className="Js-bar"></div>
                 <div className="Figma-bar"></div>
             </div>
+
+            <div className="Grid-extend Skills-animation-two">
+                <img className="Html-icon" src={FigmaIcon} alt="html icon"></img>
+                <img className="Css-icon" src={AbletonIcon} alt="html icon"></img>
+                <img className="Js-icon" src={GimpIcon} alt="html icon"></img>
+                <div className="Figma-bar"></div>
+                <div className="Ableton-bar"></div>
+                <div className="Gimp-bar"></div>
+            </div>
+
             <div className="Explain Beginner-explain" id="beginner">Kjenner såvidt til teknologien og er helt i begynnerfasen</div>
             <div className="Explain Novice-explain" id="novice"> Kjenner godt til teknologien og hva man kan gjøre med den. Kan arbeide selvstendig med google som hjelp, men trenger noe veiledning</div>
             <div className="Explain Junior-explain" id="pro"> Kan ganske mye og trenger mindre veiledning</div>
