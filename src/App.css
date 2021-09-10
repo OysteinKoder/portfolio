@@ -365,22 +365,7 @@ h3 {
   }
 }
 
-.Grid-extend {
-  display: grid;
-  width: 90vw;
-  grid-template-columns: 10% 1fr 1fr 1fr 1fr;
-  grid-template-rows:  repeat(3,20%);
-  /* fr causes overflow for some reason  */
-  grid-template-areas: 
-  " html htmlBar htmlBar htmlBar htmlBar"
-  " css cssBar cssBar cssBar cssBar"
-  " js jsBar jsBar jsBar jsBar";
-  margin: auto;
-  margin-bottom: 0;
-  max-height: 30vh;
-  gap: 1em;
-  margin-top:5em;
-}
+
 
 
 .About-btn {
@@ -452,8 +437,29 @@ h3 {
   opacity: 0%;
 }
 
+.Grid-extend {
+  display: grid;
+  width: 90vw;
+  grid-template-columns: 10% 1fr 1fr 1fr 1fr;
+  grid-template-rows:  repeat(3,20%);
+  /* fr causes overflow for some reason  */
+  grid-template-areas: 
+  " html htmlBar htmlBar htmlBar htmlBar"
+  " css cssBar cssBar cssBar cssBar"
+  " js jsBar jsBar jsBar jsBar";
+  margin: auto;
+  margin-bottom: 0;
+  max-height: 30vh;
+  gap: 1em;
+  margin-top:5em;
+}
+
 .Skills-animation-two {
-  
+  animation-name: opacity;
+  animation-delay: 2.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0%;
 }
 
 .Explain {
