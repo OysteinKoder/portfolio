@@ -32,7 +32,7 @@ function Skills() {
                     <div className="React-bar"></div>
                 </div>
 
-                <div className="Grid-extend Skills-animation-two">
+                <div className="Grid-extend Skills-animation-two" id="Grid-extend">
                     <img className="Figma-icon" src={FigmaIcon} alt="Figma icon"></img>
                     <img className="Live-icon" src={AbletonIcon} alt="Ableton live icon"></img>
                     <img className="Gimp-icon" src={GimpIcon} alt="gimp icon"></img>
@@ -47,7 +47,7 @@ function Skills() {
                 <div className="Explain Senior-explain" id="expert"> Personen som gir veiledning</div>
             </div>
 
-            <div className="Arrow-box">
+            <div className="Arrow-box" onClick={SkillsExstend}>
                 <h4> <em> Utvid </em></h4>
                 <Arrow className="Arrow"> </Arrow>
             </div>
@@ -62,6 +62,7 @@ let noviceSwitch = false
 let juniorSwitch = false
 let proSwitch = false
 let expertSwitch = false
+let extendSwitch = false
 
 function noviceShow() {
     const novice = document.getElementById("beginner")
@@ -105,6 +106,17 @@ function expertShow() {
         expert.classList.remove("Explain-show")
     }
     expertSwitch = !expertSwitch
+}
+
+function SkillsExstend() {
+    const extend = document.getElementById("Grid-extend")
+    if (extendSwitch === false) {
+        extend.classList.add("Skills-extend")
+    }
+    else {
+        extend.classList.remove("Skills-extend")
+    }
+    extendSwitch = !extendSwitch
 }
 
 export default Skills
