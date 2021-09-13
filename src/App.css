@@ -520,7 +520,7 @@ h3 {
 
 .Skills-animation-two {
   animation-name: opacity;
-  animation-delay: 2.5s;
+  animation-delay: 0s;
   animation-duration: 2s;
   animation-fill-mode: forwards;
   opacity: 0%;
@@ -594,8 +594,21 @@ h3 {
 
 .Skills-extend {
   display: grid;
-  animation-delay: 0ms;
+  /* animation-delay: 0ms;
+  animation:aboutShow;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards; */
 }
+
+/* @keyframes explainShow {
+  from {
+    max-height: 0vh;
+  }
+  to {
+    max-height:100vh;
+  }
+} */
+
 
 .Project-h2-2 {
   grid-area: projectH2;
