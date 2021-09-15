@@ -22,14 +22,24 @@ function Header() {
                 </div>
                 <p className="About-text" id="about" >
                     <span className="About-text-one">
-                        Hei! Det jeg liker best med front-end utvikling er at man stadig lærer noe nytt og at man arbeider med kreative løsninger. Det kjekkeste for meg er å arbeide med design og ux!
+                        Jeg er en kar i slutten av 20 årene som er glad i alt som har med it og hardware å gjøre.
+                        <br /> <br />
+                        På fritiden liker jeg å være med min forlovede, spille diverse instrumenter, produsere musikk og å være med familie, venner og kollegaer. Det går også litt tid til dataspill mens jeg prater med venner på discord. Jeg er også styreleder og hovedtrener for kampsport gruppen Øygarden Grappling.
+
                     </span>
                     <br /> <br />
                     <span className="About-text-two">
-                        Jeg begynte å lære meg å kode fordi jeg trengte en utfordring, og det er alltid nye problemer å løse når man koder! Regn med å få en engasjert ansatt med mange spørsmål dersom dere ansetter meg. Etter noen måneder med selvstudie var jeg så heldig å komme inn på et kurs som heter kodehode. Kurset varer i ett år og inneholder 6 mnd teori med 6 mnd utplassering i bedrift. Kodehode er en av de beste plassene å lære frontend utvikling da kurset er laser-fokusert på front-end og ferdige deltagere har arbeidserfaring fra  <em>ekte </em> bedrifter!
+                        Hovedsakelig har jeg arbeidet innen service og helse men har lengtet etter en større utfordring. Den utfordringen fant jeg i front-end utvikling og det er alltid nye problemer å løse når man koder. Til nå har jeg kodet i ca 3 mnd på egenhånd og resten via Kodehode. Regn med å få en engasjert ansatt med mange spørsmål om dere velger meg.
                     </span>
                     <br /> <br />
-                    På fritiden liker jeg å være med min forlovede, spille diverse instrumenter, produsere musikk og å være med familie, venner og kollegaer. Det går også litt tid til dataspill mens jeg prater med venner på discord. Utenom koding så har sjåfør-arbeid vært det kjekkeste jeg har gjort. Grunnen til det er at jeg liker å slå av en prat og å yte topp service! Dette førte til at jeg leste noen bøker om psykologi for å bedre kunne hanskes med ømfintlige samtaler.
+                    Det jeg liker best med front-end utvikling er at man stadig lærer noe nytt og at man arbeider med kreative løsninger. Det kjekkeste for meg er å arbeide med design og ux men det jeg gleder meg mest til er å lære mer javascript og “halveis-backend” løsninger.
+
+                    Ofte så våkner jeg tidlig på morningen for å arbeide før jeg går på kurs. Hvorfor spør du kanskje? Det rett og slett fordi det er så kjekt. Det går også en del tid til dugnad for å lage nettløsninger for venner/bekjente. Jeg har også opprettet et enkeltpersonforetak “Ellingsen Utvikling” som jeg håper å kunne tjene en slant med i framtiden.
+                    <br /> <br />
+                    Utenom koding så har sjåfør-arbeid vært det kjekkeste jeg har gjort. Grunnen til det er at jeg liker å slå av en prat og å yte topp service. Dette førte til at jeg leste noen bøker om psykologi for å hjelpe pasientene på en bedre måte.
+                    <br /> <br />
+                    Hvis du er på utkikk etter en sulten og lærevillig front-end utvikler så ikke nøl med å ta kontakt.
+
                     <br /> <br />
                     <span>
                         Hvis du er på utkikk etter en sulten og lærevillig front-end utvikler så ikke nøl med å ta kontakt!
