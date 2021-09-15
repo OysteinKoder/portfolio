@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "react-elastic-carousel"
 import ChildBooksOnline from "./childBooksOnline"
 import BurgerJointProject from "./burgerJoint";
+import OgProject from "./OygardenGrappling"
 import "../App.css"
 
 function projectCarousel() {
@@ -11,6 +12,7 @@ function projectCarousel() {
 <Carousel>
     <ChildBooksOnline></ChildBooksOnline>
     <BurgerJointProject></BurgerJointProject>
+    <OgProject></OgProject>
 </Carousel>
         </div>
     )

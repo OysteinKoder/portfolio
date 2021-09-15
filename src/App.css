@@ -681,7 +681,7 @@ h3 {
   }
 
 .Header-flex-box {
- flex-direction: column-reverse;
+ flex-direction:column-reverse;
  justify-content: center;
  margin: auto;
  width: fit-content;
