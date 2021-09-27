@@ -8,7 +8,7 @@ import ReactIcon from "../img/React-icon.png"
 import { ReactComponent as Arrow } from "../img/Extendarrow.svg"
 import AbletonIcon from "../img/ableton-icon-0.jpg"
 import GimpIcon from "../img/gimpIcon.png"
-
+import ArrowTurn from "./scripts/ArrowTurn"
 
 function Skills() {
     return (
@@ -48,15 +48,12 @@ function Skills() {
             </div>
 
             <div className="Arrow-box" onClick={SkillsExstend}>
-                <h4> <em> Utvid </em></h4>
-                <Arrow className="Arrow"> </Arrow>
+                <p> <em> Utvid </em></p>
+                <Arrow className="Arrow" id="Arrow"> </Arrow>
             </div>
         </div>
     )
 }
-
-
-
 
 let noviceSwitch = false
 let juniorSwitch = false
@@ -65,9 +62,15 @@ let expertSwitch = false
 let extendSwitch = false
 
 function noviceShow() {
+    const expert = document.getElementById("expert")
+    const pro = document.getElementById("pro")
+    const junior = document.getElementById("novice")
     const novice = document.getElementById("beginner")
     if (noviceSwitch === false) {
         novice.classList.add("Explain-show")
+        pro.classList.remove("Explain-show")
+        junior.classList.remove("Explain-show")
+        expert.classList.remove("Explain-show")
     }
     else {
         novice.classList.remove("Explain-show")
@@ -76,20 +79,31 @@ function noviceShow() {
 }
 
 function juniorShow() {
+    const expert = document.getElementById("expert")
+    const pro = document.getElementById("pro")
     const junior = document.getElementById("novice")
+    const novice = document.getElementById("beginner")
     if (juniorSwitch === false) {
         junior.classList.add("Explain-show")
+        novice.classList.remove("Explain-show")
+        pro.classList.remove("Explain-show")
+        expert.classList.remove("Explain-show")
     }
     else {
         junior.classList.remove("Explain-show")
     }
     juniorSwitch = !juniorSwitch
 }
-
 function proShow() {
+    const expert = document.getElementById("expert")
     const pro = document.getElementById("pro")
+    const junior = document.getElementById("novice")
+    const novice = document.getElementById("beginner")
     if (proSwitch === false) {
         pro.classList.add("Explain-show")
+        novice.classList.remove("Explain-show")
+        junior.classList.remove("Explain-show")
+        expert.classList.remove("Explain-show")
     }
     else {
         pro.classList.remove("Explain-show")
@@ -99,8 +113,14 @@ function proShow() {
 
 function expertShow() {
     const expert = document.getElementById("expert")
+    const pro = document.getElementById("pro")
+    const junior = document.getElementById("novice")
+    const novice = document.getElementById("beginner")
     if (expertSwitch === false) {
         expert.classList.add("Explain-show")
+        novice.classList.remove("Explain-show")
+        pro.classList.remove("Explain-show")
+        junior.classList.remove("Explain-show")
     }
     else {
         expert.classList.remove("Explain-show")
@@ -117,6 +137,8 @@ function SkillsExstend() {
         extend.classList.remove("Skills-extend")
     }
     extendSwitch = !extendSwitch
+    ArrowTurn()
 }
+
 
 export default Skills

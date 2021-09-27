@@ -188,16 +188,27 @@ h3 {
   margin-left: auto;
   color:#0f1b6196;
   cursor: pointer;
+  font-size: 1.5rem;
 }
 
 .Arrow {
   margin: auto;
-  transform: scale(1.8);
+  transform: scale(2.5);
   fill:#101c6288;
+  transition-duration: 250ms;
 }
 
 .Arrow-box:hover {
   transform: scale(1.2); 
+}
+
+.Turn {
+  transition-duration: 500ms;
+  transform: rotate(180deg);
+}
+
+@keyframes rotate {
+
 }
 
 .Novice:hover{
