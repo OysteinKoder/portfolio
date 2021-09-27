@@ -195,7 +195,7 @@ h3 {
   margin: auto;
   transform: scale(2.5);
   fill:#101c6288;
-  transition-duration: 250ms;
+  transition-duration: 750ms;
 }
 
 .Arrow-box:hover {
@@ -203,8 +203,8 @@ h3 {
 }
 
 .Turn {
-  transition-duration: 500ms;
-  transform: rotate(180deg);
+  transition-duration: 700ms;
+  transform: rotate(180deg) scale(2.5);
 }
 
 @keyframes rotate {
