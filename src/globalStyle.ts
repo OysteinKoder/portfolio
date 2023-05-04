@@ -1,7 +1,14 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+
+html {
+  width: 100vw;
+}
+
 :root {
+  width: 100%;
+  margin: 0 auto;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -19,24 +26,25 @@ export const GlobalStyle = createGlobalStyle`
 
 a {
   font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 100%;
   min-height: 100vh;
+  color: #86F591;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+p {
+color: #86F591;
 }
 
 button {
@@ -49,6 +57,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  color: #86F591;
 }
 button:hover {
   border-color: #646cff;
@@ -64,7 +73,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+
   }
   button {
     background-color: #f9f9f9;
@@ -72,9 +81,8 @@ button:focus-visible {
 }
 
 #root {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -111,6 +119,5 @@ button:focus-visible {
 }
 
 .read-the-docs {
-  color: #888;
 }
 `;
