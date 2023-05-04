@@ -9,7 +9,7 @@ html {
 :root {
   width: 100%;
   margin: 0 auto;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Fugaz One', cursive;
   line-height: 1.5;
   font-weight: 400;
 
