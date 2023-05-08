@@ -29,5 +29,6 @@ export const HamburgerContainer = styled.div`
     justify-content: flex-end;
     margin-top: 1rem;
     margin-right: 1rem;
+    height: fit-content;
   }
 `;

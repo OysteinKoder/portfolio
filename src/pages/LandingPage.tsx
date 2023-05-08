@@ -4,18 +4,19 @@ import { MainContent, FlexWrapper } from "../components/uiHelpers/uiHelpers";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useContext } from "react";
 import { CollapsedContext } from "../context/globalContext";
-
+import Card from "../components/Card";
 function LandingPage() {
   const { isCollapsed, toggleCollapsed } = useContext(CollapsedContext);
   return (
     <>
-      <HamburgerContainer>
-        <AiOutlineMenu size="2.5em" onClick={toggleCollapsed} />
-      </HamburgerContainer>
       <FlexWrapper direction="row">
         <NavBar collapsed={isCollapsed} />
+
         <MainContent collapsed={isCollapsed}>
-          <h1>Hey</h1>
+          <HamburgerContainer>
+            <AiOutlineMenu size="2em" onClick={toggleCollapsed} />
+          </HamburgerContainer>
+          <Card />
         </MainContent>
       </FlexWrapper>
     </>

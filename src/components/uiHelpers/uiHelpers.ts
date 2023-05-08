@@ -16,6 +16,7 @@ export const FlexWrapper = styled.div<FlexProps>`
       : props.direction == "column"
       ? "column"
       : null};
+  justify-content: space-between;
 `;
 
 export const MainContent = styled.main<MainContentProps>`
