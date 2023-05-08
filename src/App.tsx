@@ -1,36 +1,24 @@
 import { GlobalStyle } from "./globalStyle";
-import NavBar from "./components/NavBar";
-import { ContentTest, FlexWrapper } from "./components/uiHelpers/uiHelpers";
-import { useEffect, useState } from "react";
+import { CollapsedContext } from "./context/globalContext";
+import { useState } from "react";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
-  const [width, setWidth] = useState<number>(0);
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    window.addEventListener("resize", () => {
-      setWidth(window.innerWidth);
-    });
-  }, []);
+  const toggleCollapsed = () => {
+    setIsCollapsed(!isCollapsed);
+    console.log(isCollapsed);
+  };
 
-  if (width > 470) {
-    console.log("mobile");
-    {
-      return (
-        <>
-          <GlobalStyle />
-          <FlexWrapper direction="row">
-            <NavBar />
-            <ContentTest>
-              <h1>Hey</h1>
-            </ContentTest>
-          </FlexWrapper>
-        </>
-      );
-    }
-  } else {
-    return <h1>hey</h1>;
-  }
+  return (
+    <>
+      <CollapsedContext.Provider value={{ isCollapsed, toggleCollapsed }}>
+        <GlobalStyle />
+        <LandingPage />
+      </CollapsedContext.Provider>
+    </>
+  );
 }
 
 export default App;

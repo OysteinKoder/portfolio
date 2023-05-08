@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
-interface Props {
+interface FlexProps {
   direction: "row" | "column";
 }
 
-export const FlexWrapper = styled.div<Props>`
+interface MainContentProps {
+  collapsed: boolean;
+}
+
+export const FlexWrapper = styled.div<FlexProps>`
   display: flex;
   flex-direction: ${(props) =>
     props.direction == "row"
@@ -14,6 +18,10 @@ export const FlexWrapper = styled.div<Props>`
       : null};
 `;
 
-export const ContentTest = styled.div`
-  flex: 80%;
+export const MainContent = styled.main<MainContentProps>`
+  flex: 85%;
+
+  @media only screen and (max-width: 600px) {
+    flex: ${(props) => (props.collapsed == true ? "100%" : "50%")};
+  }
 `;

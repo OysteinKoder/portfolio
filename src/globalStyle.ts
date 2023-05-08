@@ -4,10 +4,13 @@ export const GlobalStyle = createGlobalStyle`
 
 html {
   width: 100vw;
+  height: 100vh;
 }
 
 :root {
   width: 100%;
+  height: 100vh;
+
   margin: 0 auto;
   font-family: 'Fugaz One', cursive;
   line-height: 1.5;
@@ -23,6 +26,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
 
 a {
   font-weight: 500;
@@ -47,18 +51,6 @@ p {
 color: #86F591;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  color: #86F591;
-}
 button:hover {
   border-color: #646cff;
 }
@@ -82,6 +74,7 @@ button:focus-visible {
 
 #root {
   width: 100%;
+  height: 100vh;
   margin: 0 auto;
   text-align: center;
 }
@@ -116,8 +109,5 @@ button:focus-visible {
 
 .card {
   padding: 2em;
-}
-
-.read-the-docs {
 }
 `;
