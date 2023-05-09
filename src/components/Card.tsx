@@ -1,5 +1,10 @@
-import { StyledCard, StyledCardImage } from "./card/cardStyles";
-import { StyledCardContainer } from "./card/cardStyles";
+import {
+  CardHeading,
+  CardSection,
+  CardTitle,
+  StyledCard,
+  StyledCardImage,
+} from "./card/cardStyles";
 import { FC } from "react";
 
 const techIcons = {
@@ -9,26 +14,48 @@ const techIcons = {
 
 interface CardProps {
   variant?: "image" | "titleAndText" | "headerAndText" | "headerAndImage";
-  text?: string;
-  title?: string;
-  image?: string;
-  alt?: string;
+  topLeftImage?: string;
+  topLeftImageAlt?: string;
+  topRightTitle?: string;
+  topRightText?: string;
+  bottomLeftTitle?: string;
+  bottomLeftText?: string;
+  bottomRightTitle?: string;
+  bottomRightText?: string;
 }
 
-const Card: FC<CardProps> = ({ variant, text, title, image, alt }) => {
-  return (
-    <StyledCardContainer>
+const Card: FC<CardProps> = ({
+  variant,
+  topLeftImage: topLeftImage,
+  topLeftImageAlt: topLeftImageAlt,
+  topRightText: topRightText,
+  topRightTitle: topRightTitle,
+  bottomLeftTitle: bottomLeftTitle,
+  bottomLeftText: bottomLeftText,
+  bottomRightTitle: bottomRightTitle,
+  bottomRightText: bottomRightText,
+}) => {
+  if (variant === "image") {
+    return (
       <StyledCard>
-        <StyledCardImage src={image} alt={alt} />
-        <div>
-          <h1>{title}</h1>
-          <p>{text}</p>
-        </div>
-        <p>hey</p>
-        <p>hey2</p>
+        <StyledCardImage src={topLeftImage} alt={topLeftImageAlt} />
+        <CardSection>
+          <CardTitle>{topRightTitle}</CardTitle>
+          <p>{topRightText}</p>
+        </CardSection>
+        <CardSection>
+          <CardHeading>{bottomLeftTitle}</CardHeading>
+          <p>{bottomLeftText}</p>
+        </CardSection>
+        <CardSection>
+          <CardHeading>{bottomRightTitle}</CardHeading>
+          <p>{bottomRightText}</p>
+        </CardSection>
       </StyledCard>
-    </StyledCardContainer>
-  );
+    );
+  } else {
+    return <h1>hei</h1>;
+  }
 };
 
 export default Card;

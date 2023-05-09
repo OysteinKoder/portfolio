@@ -13,12 +13,20 @@ function LandingPage() {
     <>
       <FlexWrapper direction="row">
         <NavBar collapsed={isCollapsed} />
-
         <MainContent collapsed={isCollapsed}>
           <HamburgerContainer>
             <AiOutlineMenu size="2em" onClick={toggleCollapsed} />
           </HamburgerContainer>
-          <Card title="En Tittel" text="dette er text" image={profilBilde} />
+          <Card
+            variant="image"
+            topLeftImage={profilBilde}
+            topRightTitle="Hei! Mitt navn er Øystein Ellingsen"
+            topRightText="Jeg er en frontend utvikler med stor interesse for å lære nye ferdigheter, og å ha det kjekt på arbeidsplassen"
+            bottomLeftTitle="Ferdigheter"
+            bottomLeftText="TypeScript, JavaScript, React, Git, Css, Html"
+            bottomRightTitle="Utforsker"
+            bottomRightText="Vue.js, C#, DotNet Core, Tailwind, Larvel"
+          />
         </MainContent>
       </FlexWrapper>
     </>
