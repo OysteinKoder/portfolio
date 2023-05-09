@@ -5,6 +5,8 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { useContext } from "react";
 import { CollapsedContext } from "../context/globalContext";
 import Card from "../components/Card";
+import profilBilde from "../assets/Profilbilde_Øystein.jpg";
+
 function LandingPage() {
   const { isCollapsed, toggleCollapsed } = useContext(CollapsedContext);
   return (
@@ -16,7 +18,7 @@ function LandingPage() {
           <HamburgerContainer>
             <AiOutlineMenu size="2em" onClick={toggleCollapsed} />
           </HamburgerContainer>
-          <Card />
+          <Card title="En Tittel" text="dette er text" image={profilBilde} />
         </MainContent>
       </FlexWrapper>
     </>

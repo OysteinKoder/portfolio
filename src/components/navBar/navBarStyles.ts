@@ -25,10 +25,9 @@ export const HamburgerContainer = styled.div`
 
   @media only screen and (max-width: 600px) {
     display: flex;
-    display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-top: 1rem;
-    margin-right: 1rem;
+    margin-left: 1rem;
     height: fit-content;
   }
 `;

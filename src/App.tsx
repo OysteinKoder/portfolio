@@ -4,7 +4,7 @@ import { useState } from "react";
 import LandingPage from "./pages/LandingPage";
 
 function App() {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   const toggleCollapsed = () => {
     setIsCollapsed(!isCollapsed);
