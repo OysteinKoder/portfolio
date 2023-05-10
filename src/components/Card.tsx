@@ -4,6 +4,7 @@ import {
   CardTitle,
   StyledCard,
   StyledCardImage,
+  StyledUl,
 } from "./card/cardStyles";
 import { FC } from "react";
 
@@ -11,6 +12,8 @@ const techIcons = {
   react:
     "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png",
 };
+
+const skills = ["C#", "Vue.js", ".Net Core", "Tailwind"];
 
 interface CardProps {
   variant?: "image" | "titleAndText" | "headerAndText" | "headerAndImage";
@@ -21,7 +24,7 @@ interface CardProps {
   bottomLeftTitle?: string;
   bottomLeftText?: string;
   bottomRightTitle?: string;
-  bottomRightText?: string;
+  bottomRightList?: string;
 }
 
 const Card: FC<CardProps> = ({
@@ -33,7 +36,7 @@ const Card: FC<CardProps> = ({
   bottomLeftTitle: bottomLeftTitle,
   bottomLeftText: bottomLeftText,
   bottomRightTitle: bottomRightTitle,
-  bottomRightText: bottomRightText,
+  bottomRightList: bottomRightList,
 }) => {
   if (variant === "image") {
     return (
@@ -48,8 +51,14 @@ const Card: FC<CardProps> = ({
           <p>{bottomLeftText}</p>
         </CardSection>
         <CardSection>
-          <CardHeading>{bottomRightTitle}</CardHeading>
-          <p>{bottomRightText}</p>
+          <div>
+            <CardHeading>{bottomRightTitle}</CardHeading>
+            <StyledUl>
+              {skills.map((skill, idx) => (
+                <li key={idx}>{skill}</li>
+              ))}
+            </StyledUl>
+          </div>
         </CardSection>
       </StyledCard>
     );

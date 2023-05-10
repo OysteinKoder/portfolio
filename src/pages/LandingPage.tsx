@@ -20,12 +20,12 @@ function LandingPage() {
           <Card
             variant="image"
             topLeftImage={profilBilde}
-            topRightTitle="Hei! Mitt navn er Øystein Ellingsen"
+            topRightTitle="Hei, jeg heter Øystein og er en frontend utvikler"
             topRightText="Jeg er en frontend utvikler med stor interesse for å lære nye ferdigheter, og å ha det kjekt på arbeidsplassen"
             bottomLeftTitle="Ferdigheter"
             bottomLeftText="TypeScript, JavaScript, React, Git, Css, Html"
             bottomRightTitle="Utforsker"
-            bottomRightText="Vue.js, C#, DotNet Core, Tailwind, Larvel"
+            bottomRightList="Vue.js, C#, DotNet Core, Tailwind, Larvel"
           />
         </MainContent>
       </FlexWrapper>

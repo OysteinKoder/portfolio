@@ -50,3 +50,8 @@ export const CardSection = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+export const StyledUl = styled.ul`
+  padding-left: 1rem;
+  text-align: left;
+`;

@@ -12,9 +12,10 @@ html {
   height: 100vh;
 
   margin: 0 auto;
-  font-family: 'Fugaz One', cursive;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 1.5em;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
