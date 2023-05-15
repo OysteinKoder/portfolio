@@ -46,6 +46,10 @@ export const FlexWrapper = styled.div<FlexProps>`
       : props.marginSides == "large"
       ? "10rem"
       : null};
+
+  @media only screen and (max-width: 1400px) {
+    margin-left: 0;
+  }
 `;
 
 export const MainContent = styled.main<MainContentProps>`
@@ -54,4 +58,10 @@ export const MainContent = styled.main<MainContentProps>`
   @media only screen and (max-width: 600px) {
     flex: ${(props) => (props.collapsed == true ? "100%" : "50%")};
   }
+`;
+export const LineSeparator = styled.div`
+  width: 80%;
+  margin: auto;
+  margin-top: 1rem;
+  border-bottom: 1px solid #86f591;
 `;

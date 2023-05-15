@@ -11,7 +11,7 @@ export const StyledCard = styled.section`
 
   @media only screen and (max-width: 1400px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 0.5fr auto auto auto;
     min-height: 100%;
     grid-row-gap: 5rem;
   }
@@ -28,6 +28,9 @@ export const StyledCardImage = styled.img`
   object-fit: contain;
   border-radius: 50%;
   margin: auto;
+  @media only screen and (max-width: 1400px) {
+    width: 85%;
+  }
 `;
 
 export const CardTitle = styled.h1`
@@ -50,11 +53,6 @@ export const CardSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-export const StyledUl = styled.ul`
-  padding-left: 1rem;
-  text-align: left;
 `;
 
 export const StyledTechP = styled.p<{ color?: string }>`
