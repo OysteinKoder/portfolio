@@ -1,4 +1,5 @@
 import profileImage from "../../assets/Profilbilde_Øystein.jpg";
+// @ts-ignore
 import learnCode from "../../assets/learnCode.jpg";
 interface ICard {
   topLeftImage: any;

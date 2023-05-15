@@ -12,7 +12,9 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { useContext } from "react";
 import { CollapsedContext } from "../context/globalContext";
 import Card from "../components/Card";
+// @ts-ignore
 import arrowDown from "../assets/arrowDown.svg";
+// @ts-ignore
 import { ArrowSvg } from "../components/svgArrow";
 import { cardContent } from "./cardContent/cardContent";
 
