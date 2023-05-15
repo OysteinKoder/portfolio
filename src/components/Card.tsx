@@ -42,15 +42,7 @@ interface CardProps {
   bottomRightList?: string;
 }
 
-const Card: FC<CardProps> = ({
-  props: props,
-  topLeftImage: topLeftImage,
-  topLeftImageAlt: topLeftImageAlt,
-  topRightText: topRightText,
-  topRightTitle: topRightTitle,
-  bottomLeftTitle: bottomLeftTitle,
-  bottomRightTitle: bottomRightTitle,
-}) => {
+const Card: FC<CardProps> = ({ props: props }) => {
   return (
     <StyledCard>
       <StyledCardImage src={props.topLeftImage} alt={props.topLeftImageAlt} />
@@ -61,7 +53,7 @@ const Card: FC<CardProps> = ({
       <CardSection>
         <CardHeading>{props.bottomLeftTitle}</CardHeading>
         <FlexWrapper direction="row" flexWrap="wrap">
-          {props.bottomLeftText.map((tech, idx) => (
+          {props.bottomLeftText.map((tech: any, idx: number) => (
             <StyledTechP color={technologies.colors[idx]}>{tech}</StyledTechP>
           ))}
         </FlexWrapper>
