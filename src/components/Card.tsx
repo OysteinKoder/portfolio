@@ -4,16 +4,31 @@ import {
   CardTitle,
   StyledCard,
   StyledCardImage,
+  StyledTechP,
   StyledUl,
 } from "./card/cardStyles";
 import { FC } from "react";
+import { FlexWrapper } from "./uiHelpers/uiHelpers";
 
-const techIcons = {
-  react:
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png",
+// This is a card component that can be used to display information in a card format.
+// It has sevral different props that can be used to display different information.
+// It has 4 different "grid sections", see cardprops for more information.
+
+const skills = {
+  colors: ["#9aebff", "#a4f4c4", "#faf4a4", "#f78db3"],
+  tech: ["C#", "Vue.js", ".Net Core", "Tailwind"],
 };
-
-const skills = ["C#", "Vue.js", ".Net Core", "Tailwind"];
+const technologies = {
+  colors: ["#9aebff", "#a4f4c4", "#faf4a4", "#f78db3", "#b68fff", "#ff9b8f"],
+  tech: [
+    "# TypeScript ❤️",
+    "# JavaScript",
+    "# React❤️",
+    "# Git",
+    "# Css",
+    "# Html",
+  ],
+};
 
 interface CardProps {
   variant?: "image" | "titleAndText" | "headerAndText" | "headerAndImage";
@@ -34,9 +49,7 @@ const Card: FC<CardProps> = ({
   topRightText: topRightText,
   topRightTitle: topRightTitle,
   bottomLeftTitle: bottomLeftTitle,
-  bottomLeftText: bottomLeftText,
   bottomRightTitle: bottomRightTitle,
-  bottomRightList: bottomRightList,
 }) => {
   if (variant === "image") {
     return (
@@ -48,16 +61,24 @@ const Card: FC<CardProps> = ({
         </CardSection>
         <CardSection>
           <CardHeading>{bottomLeftTitle}</CardHeading>
-          <p>{bottomLeftText}</p>
+          <FlexWrapper direction="row" flexWrap="wrap">
+            {technologies.tech.map((tech, idx) => (
+              <StyledTechP color={technologies.colors[idx]} key={idx}>
+                {tech}
+              </StyledTechP>
+            ))}
+          </FlexWrapper>
         </CardSection>
         <CardSection>
           <div>
             <CardHeading>{bottomRightTitle}</CardHeading>
-            <StyledUl>
-              {skills.map((skill, idx) => (
-                <li key={idx}>{skill}</li>
+            <FlexWrapper direction="row" flexWrap="wrap" marginSides="small">
+              {skills.tech.map((skill, idx) => (
+                <StyledTechP color={skills.colors[idx]} key={idx}>
+                  {skill}
+                </StyledTechP>
               ))}
-            </StyledUl>
+            </FlexWrapper>
           </div>
         </CardSection>
       </StyledCard>

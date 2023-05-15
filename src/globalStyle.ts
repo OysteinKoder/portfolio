@@ -15,7 +15,7 @@ html {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1.25rem;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);

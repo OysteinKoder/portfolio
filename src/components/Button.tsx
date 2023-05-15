@@ -5,5 +5,6 @@ export const Button = styled.button`
   cursor: pointer;
   border-bottom: rgb(134, 245, 145) solid 1px;
   margin: 0.5em;
+  margin-top: 5rem;
   padding: 0.5em;
 `;
