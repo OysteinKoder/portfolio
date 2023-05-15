@@ -40,6 +40,7 @@ function LandingPage() {
             <>
               <Card props={card} key={idx} />
               <LineSeparator />
+              <h2>Konstruksjon ⚙️</h2>
             </>
           ))}
         </MainContent>

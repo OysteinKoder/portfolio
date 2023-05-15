@@ -30,22 +30,22 @@ export const cardContent: ICard[] = [
     bottomRightTitle: "Utforsker",
     bottomRightList: "Vue.js, C#, DotNet Core, Tailwind, Larvel",
   },
-  {
-    topLeftImage: learnCode,
-    topRightTitle: "React Læringsprosjekt",
-    topRightText:
-      "Dette er et prosjekt man kan laste ned fra github for å lære seg React. Det er åpent for alle og har flere stjerner / anbefalinger. Prosjektet går igjennom de viktigste prinsippene i React og krever at man har litt kjennskap til javascript html og css.",
-    bottomLeftTitle: "Ferdigheter man lærer",
-    bottomLeftText: [
-      "Styled-Components",
-      "JavaScript",
-      "React",
-      "Git",
-      "Css",
-      "Html",
-    ],
-    bottomLeftColor: ["#9aebff", "#a4f4c4", "#faf4a4", "#f78db3"],
-    bottomRightTitle: "Forkunnskaper",
-    bottomRightList: "Html, Javascript React",
-  },
+  //   {
+  //     topLeftImage: learnCode,
+  //     topRightTitle: "React Læringsprosjekt",
+  //     topRightText:
+  //       "Dette er et prosjekt man kan laste ned fra github for å lære seg React. Det er åpent for alle og har flere stjerner / anbefalinger. Prosjektet går igjennom de viktigste prinsippene i React og krever at man har litt kjennskap til javascript html og css.",
+  //     bottomLeftTitle: "Ferdigheter man lærer",
+  //     bottomLeftText: [
+  //       "Styled-Components",
+  //       "JavaScript",
+  //       "React",
+  //       "Git",
+  //       "Css",
+  //       "Html",
+  //     ],
+  //     bottomLeftColor: ["#9aebff", "#a4f4c4", "#faf4a4", "#f78db3"],
+  //     bottomRightTitle: "Forkunnskaper",
+  //     bottomRightList: "Html, Javascript React",
+  //   },
 ];

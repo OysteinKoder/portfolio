@@ -13,9 +13,9 @@ const NavBar: FC<NavBarContainerProps> = ({ collapsed }) => {
   return (
     <NavBarContainer collapsed={collapsed}>
       <Button onClick={toggleCollapsed}>Om Meg</Button>
-      <Button onClick={toggleCollapsed}>Prosjekter</Button>
-      <Button onClick={toggleCollapsed}>Cv</Button>
-      <Button onClick={toggleCollapsed}>Github</Button>
+      <Button onClick={toggleCollapsed}>Konstrueres⚙️</Button>
+      <Button onClick={toggleCollapsed}>Konstrueres⚙️</Button>
+      <Button onClick={toggleCollapsed}>Konstrueres⚙️</Button>
     </NavBarContainer>
   );
 };
