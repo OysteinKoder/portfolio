@@ -1,10 +1,21 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  width: 100%;
+  height: 100vh;
+
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 1.25rem;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -17,21 +28,19 @@ export const GlobalStyle = createGlobalStyle`
   -webkit-text-size-adjust: 100%;
 }
 
+
 a {
   font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 100%;
   min-height: 100vh;
+  color: #86F591;
 }
 
 h1 {
@@ -39,17 +48,10 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+p {
+color: #86F591;
 }
+
 button:hover {
   border-color: #646cff;
 }
@@ -64,7 +66,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+
   }
   button {
     background-color: #f9f9f9;
@@ -72,9 +74,9 @@ button:focus-visible {
 }
 
 #root {
-  max-width: 1280px;
+  width: 100%;
+  height: 100vh;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -108,9 +110,5 @@ button:focus-visible {
 
 .card {
   padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
 `;

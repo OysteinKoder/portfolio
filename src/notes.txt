@@ -1,0 +1,4 @@
+- Grønnfarge 
+- font endre litt for "italic"
+- ikoner under ferdigheter crasher med farger, prøv å bruke monochrome 
+- window.position
