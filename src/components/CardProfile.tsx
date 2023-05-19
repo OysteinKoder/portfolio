@@ -7,10 +7,10 @@ import {
   StyledTechP,
 } from "./cardProfile/cardStyles";
 import { FC } from "react";
-import { FlexWrapper, LineSeparator } from "./uiHelpers/uiHelpers";
+import { FlexWrapper } from "./uiHelpers/uiHelpers";
 
 // This is a card component that can be used to display information in a card format.
-// It has sevral different props that can be used to display different information.
+// It has serval different props that can be used to display different information.
 // It has 4 different "grid sections", see cardprops for more information.
 
 const skills = {

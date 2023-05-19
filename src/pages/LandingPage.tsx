@@ -9,10 +9,8 @@ import { useContext } from "react";
 import { CollapsedContext } from "../context/globalContext";
 import ProfileCard from "../components/CardProfile";
 import { cardContent } from "./cardContent/cardContent";
-import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ProjectCarousel from "../components/CardProject";
-import { SubTitle } from "../components/cardProfile/cardStyles";
 import { MarginSpacer } from "../components/uiHelpers/uiHelpers";
 const layerOnTop: React.CSSProperties = {
   zIndex: 3,

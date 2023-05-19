@@ -36,7 +36,7 @@ const projects: ProjectsProps = {
   ],
 };
 
-const ProjectCarousel: FC<ProjectsProps> = () => {
+const ProjectCarousel: FC = () => {
   return (
     <>
       <SubTitle>Projects</SubTitle>
