@@ -50,7 +50,7 @@ const ProjectCarousel: FC = () => {
                   src={project.image}
                   alt="placeholder"
                 />
-                <div>
+                <p>
                   <a
                     href="https://github.com/OysteinKoder/react_lessons"
                     target="_blank"
@@ -60,7 +60,7 @@ const ProjectCarousel: FC = () => {
                     {project.text}
                     <GoLinkExternal />
                   </a>
-                </div>
+                </p>
               </div>
             </div>
           );

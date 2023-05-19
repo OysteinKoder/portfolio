@@ -10,4 +10,5 @@ export const StyledImage = styled.img<{ size: "small" | "medium" | "large" }>`
       ? "100% !important"
       : null};
   object-fit: contain;
+  border-radius: 10px;
 `;
