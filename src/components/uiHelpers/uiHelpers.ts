@@ -65,3 +65,14 @@ export const LineSeparator = styled.div`
   margin-top: 1rem;
   border-bottom: 1px solid #86f591;
 `;
+
+export const MarginSpacer = styled.div<{ size: "small" | "medium" | "large" }>`
+  margin-top: ${(props) =>
+    props.size == "small"
+      ? "1rem"
+      : props.size == "medium"
+      ? "3rem"
+      : props.size == "large"
+      ? "10rem"
+      : null};
+`;

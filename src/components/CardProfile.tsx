@@ -1,7 +1,6 @@
 import {
   CardHeading,
   CardSection,
-  CardSubTitle,
   CardTitle,
   StyledCard,
   StyledCardImage,
@@ -70,8 +69,6 @@ const ProfileCard: FC<CardProps> = ({ props: props }) => {
           </div>
         </CardSection>
       </StyledCard>
-      <LineSeparator />
-      <CardSubTitle>Projects</CardSubTitle>
     </>
   );
 };

@@ -24,7 +24,6 @@ export const Testbox = styled.div`
 `;
 
 export const StyledCardImage = styled.img<{ variant?: "project" }>`
-  width: 65%;
   object-fit: contain;
   border-radius: 50%;
   margin: auto;
@@ -32,6 +31,7 @@ export const StyledCardImage = styled.img<{ variant?: "project" }>`
     width: 85%;
   }
   grid-row: ${(props) => (props.variant === "project" ? "1/3" : "1/2")};
+  width: 65% !important;
 `;
 
 export const CardTitle = styled.h1`
@@ -40,16 +40,16 @@ export const CardTitle = styled.h1`
   border-bottom: 1px solid #86f591;
 `;
 
-export const CardSubTitle = styled.h2`
+export const SubTitle = styled.h2`
   font-size: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #86f591;
+  padding: 0 1rem 1rem 1rem;
+  width: fit-content;
+  margin: auto;
 `;
 
 export const CardHeading = styled.h3`
   font-size: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #86f591;
   width: fit-content;
   margin: auto;
   margin-top: 1.5rem;
