@@ -3,21 +3,15 @@ import {
   HamburgerContainer,
   Positioner,
 } from "../components/navBar/navBarStyles";
-import {
-  MainContent,
-  FlexWrapper,
-  LineSeparator,
-} from "../components/uiHelpers/uiHelpers";
+import { MainContent, FlexWrapper } from "../components/uiHelpers/uiHelpers";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useContext } from "react";
 import { CollapsedContext } from "../context/globalContext";
-import Card from "../components/Card";
-// @ts-ignore
-import arrowDown from "../assets/arrowDown.svg";
-// @ts-ignore
-import { ArrowSvg } from "../components/svgArrow";
+import ProfileCard from "../components/CardProfile";
 import { cardContent } from "./cardContent/cardContent";
-
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import CardProject from "../components/CardProject";
 const layerOnTop: React.CSSProperties = {
   zIndex: 3,
   position: "fixed",
@@ -40,11 +34,21 @@ function LandingPage() {
           </HamburgerContainer>
           {cardContent.map((card, idx) => (
             <>
-              <Card props={card} key={idx} />
-              <LineSeparator />
-              <h2>Konstrueres ⚙️</h2>
+              <ProfileCard props={card} key={idx} />
             </>
           ))}
+
+          <Carousel>
+            <div>
+              <CardProject />
+            </div>
+            <div>
+              <CardProject />
+            </div>
+            <div>
+              <CardProject />
+            </div>
+          </Carousel>
         </MainContent>
       </FlexWrapper>
     </>
