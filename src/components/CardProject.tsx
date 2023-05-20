@@ -36,9 +36,13 @@ const projects: ProjectsProps = {
   ],
 };
 
-const ProjectCarousel: FC = () => {
+interface Props {
+  reference: React.RefObject<HTMLDivElement>;
+}
+
+const ProjectCarousel: FC<Props> = (props) => {
   return (
-    <>
+    <div ref={props.reference}>
       <SubTitle>Projects</SubTitle>
       <Carousel>
         {projects.projects.map((project, idx) => {
@@ -66,7 +70,7 @@ const ProjectCarousel: FC = () => {
           );
         })}
       </Carousel>
-    </>
+    </div>
   );
 };
 

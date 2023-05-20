@@ -12,6 +12,7 @@ import { cardContent } from "./cardContent/cardContent";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ProjectCarousel from "../components/CardProject";
 import { MarginSpacer } from "../components/uiHelpers/uiHelpers";
+import { useRef } from "react";
 const layerOnTop: React.CSSProperties = {
   zIndex: 3,
   position: "fixed",
@@ -19,10 +20,16 @@ const layerOnTop: React.CSSProperties = {
 
 function LandingPage() {
   const { isCollapsed, toggleCollapsed } = useContext(CollapsedContext);
+  const profileRef = useRef<HTMLDivElement>(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
   return (
     <>
       <FlexWrapper direction="row">
-        <NavBar collapsed={isCollapsed} />
+        <NavBar
+          collapsed={isCollapsed}
+          projectsRef={carouselRef}
+          profileRef={profileRef}
+        />
         <Positioner collapsed={isCollapsed} />
         <MainContent collapsed={isCollapsed}>
           <HamburgerContainer>
@@ -34,11 +41,11 @@ function LandingPage() {
           </HamburgerContainer>
           {cardContent.map((card, idx) => (
             <>
-              <ProfileCard props={card} key={idx} />
+              <ProfileCard props={card} key={idx} reference={profileRef} />
             </>
           ))}
           <MarginSpacer size="medium" />
-          <ProjectCarousel />
+          <ProjectCarousel reference={carouselRef} />
         </MainContent>
       </FlexWrapper>
     </>

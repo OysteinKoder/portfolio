@@ -39,11 +39,12 @@ interface CardProps {
   bottomLeftText?: string;
   bottomRightTitle?: string;
   bottomRightList?: string;
+  reference: React.RefObject<HTMLDivElement>;
 }
 
-const ProfileCard: FC<CardProps> = ({ props: props }) => {
+const ProfileCard: FC<CardProps> = ({ props: props, reference }) => {
   return (
-    <>
+    <div ref={reference}>
       <StyledCard>
         <StyledCardImage src={props.topLeftImage} alt={props.topLeftImageAlt} />
         <CardSection>
@@ -69,7 +70,7 @@ const ProfileCard: FC<CardProps> = ({ props: props }) => {
           </div>
         </CardSection>
       </StyledCard>
-    </>
+    </div>
   );
 };
 
