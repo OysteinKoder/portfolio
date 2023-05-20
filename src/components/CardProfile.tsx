@@ -44,33 +44,31 @@ interface CardProps {
 
 const ProfileCard: FC<CardProps> = ({ props: props, reference }) => {
   return (
-    <div ref={reference}>
-      <StyledCard>
-        <StyledCardImage src={props.topLeftImage} alt={props.topLeftImageAlt} />
-        <CardSection>
-          <CardTitle>{props.topRightTitle}</CardTitle>
-          <p>{props.topRightText}</p>
-        </CardSection>
-        <CardSection>
-          <CardHeading>{props.bottomLeftTitle}</CardHeading>
-          <FlexWrapper direction="row" flexWrap="wrap">
-            {props.bottomLeftText.map((tech: any, idx: number) => (
-              <StyledTechP color={technologies.colors[idx]}>{tech}</StyledTechP>
+    <StyledCard ref={reference}>
+      <StyledCardImage src={props.topLeftImage} alt={props.topLeftImageAlt} />
+      <CardSection>
+        <CardTitle>{props.topRightTitle}</CardTitle>
+        <p>{props.topRightText}</p>
+      </CardSection>
+      <CardSection>
+        <CardHeading>{props.bottomLeftTitle}</CardHeading>
+        <FlexWrapper direction="row" flexWrap="wrap">
+          {props.bottomLeftText.map((tech: any, idx: number) => (
+            <StyledTechP color={technologies.colors[idx]}>{tech}</StyledTechP>
+          ))}
+        </FlexWrapper>
+      </CardSection>
+      <CardSection>
+        <div>
+          <CardHeading>{props.bottomRightTitle}</CardHeading>
+          <FlexWrapper direction="row" flexWrap="wrap" marginSides="small">
+            {skills.tech.map((skill, idx) => (
+              <StyledTechP color={skills.colors[idx]}>{skill}</StyledTechP>
             ))}
           </FlexWrapper>
-        </CardSection>
-        <CardSection>
-          <div>
-            <CardHeading>{props.bottomRightTitle}</CardHeading>
-            <FlexWrapper direction="row" flexWrap="wrap" marginSides="small">
-              {skills.tech.map((skill, idx) => (
-                <StyledTechP color={skills.colors[idx]}>{skill}</StyledTechP>
-              ))}
-            </FlexWrapper>
-          </div>
-        </CardSection>
-      </StyledCard>
-    </div>
+        </div>
+      </CardSection>
+    </StyledCard>
   );
 };
 
