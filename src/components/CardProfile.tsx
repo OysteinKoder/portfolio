@@ -54,7 +54,9 @@ const ProfileCard: FC<CardProps> = ({ props: props, reference }) => {
         <CardHeading>{props.bottomLeftTitle}</CardHeading>
         <FlexWrapper direction="row" flexWrap="wrap">
           {props.bottomLeftText.map((tech: any, idx: number) => (
-            <StyledTechP color={technologies.colors[idx]}>{tech}</StyledTechP>
+            <StyledTechP color={technologies.colors[idx]} key={idx}>
+              {tech}
+            </StyledTechP>
           ))}
         </FlexWrapper>
       </CardSection>
@@ -63,7 +65,9 @@ const ProfileCard: FC<CardProps> = ({ props: props, reference }) => {
           <CardHeading>{props.bottomRightTitle}</CardHeading>
           <FlexWrapper direction="row" flexWrap="wrap" marginSides="small">
             {skills.tech.map((skill, idx) => (
-              <StyledTechP color={skills.colors[idx]}>{skill}</StyledTechP>
+              <StyledTechP color={skills.colors[idx]} key={skills.colors[idx]}>
+                {skill}
+              </StyledTechP>
             ))}
           </FlexWrapper>
         </div>
