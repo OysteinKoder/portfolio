@@ -42,11 +42,7 @@ function LandingPage() {
               style={layerOnTop}
             />
           </HamburgerContainer>
-          {cardContent.map((card, idx) => (
-            <>
-              <ProfileCard props={card} key={idx} reference={profileRef} />
-            </>
-          ))}
+          <ProfileCard props={cardContent[0]} reference={profileRef} />
           <MarginSpacer size="large" />
           <ProjectCarousel reference={carouselRef} />
           <MarginSpacer size="large" />
