@@ -5,6 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { SubTitle } from "./cardProfile/cardStyles";
 import { GoLinkExternal } from "react-icons/go";
+import { MarginSpacer } from "./uiHelpers/uiHelpers";
 
 interface ProjectsProps {
   projects: {
@@ -36,10 +37,15 @@ const projects: ProjectsProps = {
   ],
 };
 
-const ProjectCarousel: FC = () => {
+interface Props {
+  reference: React.RefObject<HTMLDivElement>;
+}
+
+const ProjectCarousel: FC<Props> = (props) => {
   return (
-    <>
+    <div ref={props.reference}>
       <SubTitle>Projects</SubTitle>
+      <MarginSpacer size="medium" />
       <Carousel>
         {projects.projects.map((project, idx) => {
           return (
@@ -66,7 +72,7 @@ const ProjectCarousel: FC = () => {
           );
         })}
       </Carousel>
-    </>
+    </div>
   );
 };
 

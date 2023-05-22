@@ -12,6 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@types/styled-components": "^5.1.26",
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",

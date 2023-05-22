@@ -5,7 +5,10 @@ interface FlexProps {
   flexWrap?: "wrap";
   justifyContent?: "space-between" | "center";
   alignItems?: "center";
-  marginSides?: "small" | "medium" | "large";
+  marginLeft?: "small" | "medium" | "large";
+  marginRight?: "small" | "medium" | "large";
+  width?: "medium";
+  margin?: "auto";
 }
 
 interface MainContentProps {
@@ -27,26 +30,29 @@ export const FlexWrapper = styled.div<FlexProps>`
       ? "center"
       : null};
   columns: 2;
-  width: 100%;
+  width: ${(props) => (props.width == "medium" ? "80%" : "100%")};
   flex-wrap: ${(props) => (props.flexWrap == "wrap" ? "wrap" : null)};
   align-items: ${(props) => (props.alignItems == "center" ? "center" : null)};
   margin-left: ${(props) =>
-    props.marginSides == "small"
+    props.marginLeft == "small"
       ? "2rem"
-      : props.marginSides == "medium"
+      : props.marginLeft == "medium"
       ? "5rem"
-      : props.marginSides == "large"
+      : props.marginLeft == "large"
       ? "10rem"
       : null};
   margin-right: ${(props) =>
-    props.marginSides == "small"
+    props.marginRight == "small"
       ? "2rem"
-      : props.marginSides == "medium"
+      : props.marginRight == "medium"
       ? "5rem"
-      : props.marginSides == "large"
+      : props.marginRight == "large"
       ? "10rem"
       : null};
 
+  margin: ${(props) => (props.margin == "auto" ? "auto" : null)};
+
+  column-gap: 2rem;
   @media only screen and (max-width: 1400px) {
     margin-left: 0;
   }
