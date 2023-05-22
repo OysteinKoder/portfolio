@@ -13,7 +13,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ProjectCarousel from "../components/CardProject";
 import { MarginSpacer } from "../components/uiHelpers/uiHelpers";
 import { useRef } from "react";
-import { Contact } from "../components/Contact";
+import { Contact } from "../components/ContactForm";
 const layerOnTop: React.CSSProperties = {
   zIndex: 3,
   position: "fixed",
@@ -47,6 +47,7 @@ function LandingPage() {
           ))}
           <MarginSpacer size="medium" />
           <ProjectCarousel reference={carouselRef} />
+          <MarginSpacer size="medium" />
           <Contact />
         </MainContent>
       </FlexWrapper>

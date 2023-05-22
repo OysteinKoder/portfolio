@@ -63,7 +63,7 @@ const ProfileCard: FC<CardProps> = ({ props: props, reference }) => {
       <CardSection>
         <div>
           <CardHeading>{props.bottomRightTitle}</CardHeading>
-          <FlexWrapper direction="row" flexWrap="wrap" marginSides="small">
+          <FlexWrapper direction="row" flexWrap="wrap" marginLeft="small">
             {skills.tech.map((skill, idx) => (
               <StyledTechP color={skills.colors[idx]} key={skills.colors[idx]}>
                 {skill}
