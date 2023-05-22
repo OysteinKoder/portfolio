@@ -1,7 +1,6 @@
-import { useRef } from "react";
+import { useRef, FC } from "react";
 import emailjs from "@emailjs/browser";
 import {
-  StyledContainer,
   StyledForm,
   StyledInput,
   StyledInputSend,
@@ -10,9 +9,13 @@ import {
 import { SubTitle } from "./cardProfile/cardStyles";
 import { FlexWrapper, MarginSpacer } from "./uiHelpers/uiHelpers";
 import { AiOutlineMail } from "react-icons/ai";
-export const Contact = () => {
-  const form: any = useRef();
 
+interface Props {
+  reference: React.RefObject<HTMLDivElement>;
+}
+
+export const Contact: FC<Props> = (props) => {
+  const form: any = useRef();
   const sendEmail = (e: { preventDefault: () => void; target: any }) => {
     e.preventDefault();
 
@@ -35,7 +38,7 @@ export const Contact = () => {
   };
 
   return (
-    <>
+    <div ref={props.reference}>
       <SubTitle>Ta Kontakt</SubTitle>
       <MarginSpacer size="medium" />
       <FlexWrapper direction="row" width="medium" margin="auto">
@@ -51,6 +54,6 @@ export const Contact = () => {
           <StyledInputSend type="submit" value="Send" />
         </StyledForm>
       </FlexWrapper>
-    </>
+    </div>
   );
 };

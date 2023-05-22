@@ -13,7 +13,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ProjectCarousel from "../components/CardProject";
 import { MarginSpacer } from "../components/uiHelpers/uiHelpers";
 import { useRef } from "react";
-import { Contact } from "../components/ContactForm";
+import { Contact as ContactForm } from "../components/ContactForm";
 const layerOnTop: React.CSSProperties = {
   zIndex: 3,
   position: "fixed",
@@ -23,6 +23,7 @@ function LandingPage() {
   const { isCollapsed, toggleCollapsed } = useContext(CollapsedContext);
   const profileRef = useRef<HTMLDivElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
   return (
     <>
       <FlexWrapper direction="row">
@@ -30,6 +31,7 @@ function LandingPage() {
           collapsed={isCollapsed}
           projectsRef={carouselRef}
           profileRef={profileRef}
+          contactRef={contactRef}
         />
         <Positioner collapsed={isCollapsed} />
         <MainContent collapsed={isCollapsed}>
@@ -48,7 +50,7 @@ function LandingPage() {
           <MarginSpacer size="medium" />
           <ProjectCarousel reference={carouselRef} />
           <MarginSpacer size="medium" />
-          <Contact />
+          <ContactForm reference={contactRef} />
         </MainContent>
       </FlexWrapper>
     </>
