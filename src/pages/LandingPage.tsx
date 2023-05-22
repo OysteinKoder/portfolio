@@ -47,9 +47,9 @@ function LandingPage() {
               <ProfileCard props={card} key={idx} reference={profileRef} />
             </>
           ))}
-          <MarginSpacer size="medium" />
+          <MarginSpacer size="large" />
           <ProjectCarousel reference={carouselRef} />
-          <MarginSpacer size="medium" />
+          <MarginSpacer size="large" />
           <ContactForm reference={contactRef} />
         </MainContent>
       </FlexWrapper>

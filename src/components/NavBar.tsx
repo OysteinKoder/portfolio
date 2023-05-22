@@ -22,16 +22,15 @@ const NavBar: FC<NavBarContainerProps> = ({
   const { toggleCollapsed } = useContext(CollapsedContext);
   const toProfile = () => {
     toggleCollapsed;
-    console.log("clicked");
+
     profileRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   const toProjects = () => {
     toggleCollapsed;
-    console.log("clicked");
+
     projectsRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   const toContact = () => {
-    console.log("clicked");
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
