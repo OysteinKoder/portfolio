@@ -46,11 +46,7 @@ const ProjectCarousel: FC<Props> = (props) => {
     <div ref={props.reference} style={{ width: "80%", margin: "auto" }}>
       <SubTitle>Prosjekter</SubTitle>
       <MarginSpacer size="medium" />
-      <Carousel
-        showIndicators={false}
-        dynamicHeight={false}
-        infiniteLoop={true}
-      >
+      <Carousel showIndicators={false} infiniteLoop={true}>
         {projects.projects.map((project, idx) => {
           return (
             <div key={idx}>
@@ -60,17 +56,18 @@ const ProjectCarousel: FC<Props> = (props) => {
                   src={project.image}
                   alt="placeholder"
                 />
-                <p>
-                  <StyledLink
-                    href="https://github.com/OysteinKoder/react_lessons"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={project.ariaLabel}
-                  >
-                    {project.text} <GoLinkExternal />
-                  </StyledLink>
-                </p>
               </div>
+              <MarginSpacer size="medium" />
+              <p>
+                <StyledLink
+                  href="https://github.com/OysteinKoder/react_lessons"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={project.ariaLabel}
+                >
+                  {project.text} <GoLinkExternal />
+                </StyledLink>
+              </p>
             </div>
           );
         })}

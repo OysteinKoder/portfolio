@@ -41,15 +41,26 @@ export const Contact: FC<Props> = (props) => {
     <div ref={props.reference}>
       <SubTitle>Ta Kontakt</SubTitle>
       <MarginSpacer size="medium" />
-      <FlexWrapper direction="row" width="medium" margin="auto">
+      <FlexWrapper
+        leftOnMobile={false}
+        direction="column"
+        width="medium"
+        margin="auto"
+      >
         <StyledForm ref={form} onSubmit={sendEmail}>
-          <StyledInput type="text" name="navn" placeholder="Navn..." />
+          <StyledInput required type="text" name="navn" placeholder="Navn..." />
 
-          <StyledTextArea name="melding" placeholder="Melding..." />
+          <StyledTextArea required name="melding" placeholder="Melding..." />
 
-          <StyledInput type="tlf" name="tlf" placeholder="Tlf..." />
+          <StyledInput
+            type="tel"
+            pattern="[0-9]{8}"
+            required
+            name="tlf"
+            placeholder="Tlf..."
+          />
 
-          <StyledInput type="email" name="email" placeholder="Email" />
+          <StyledInput required type="email" name="email" placeholder="Email" />
           <StyledInputSend type="submit" value="Send" />
         </StyledForm>
       </FlexWrapper>
