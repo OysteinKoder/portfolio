@@ -3,8 +3,14 @@ import { NavBarContainer } from "./navBar/navBarStyles";
 import { Button } from "./Button";
 import { CollapsedContext } from "../context/globalContext";
 import { useContext } from "react";
-import { AiFillHome, AiFillMail, AiOutlineMail } from "react-icons/ai";
+import {
+  AiFillGithub,
+  AiFillHome,
+  AiFillMail,
+  AiOutlineMail,
+} from "react-icons/ai";
 import { AiFillFolder } from "react-icons/ai";
+import { StyledLink } from "./common";
 
 interface NavBarContainerProps {
   collapsed: boolean;
@@ -44,7 +50,9 @@ const NavBar: FC<NavBarContainerProps> = ({
       <Button onClick={toContact}>
         Kontakt <AiFillMail />
       </Button>
-      <Button onClick={toggleCollapsed}>Github ⚙️</Button>
+      <StyledLink onClick={toggleCollapsed}>
+        Github <AiFillGithub />
+      </StyledLink>
     </NavBarContainer>
   );
 };

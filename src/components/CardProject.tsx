@@ -30,7 +30,7 @@ const projects: ProjectsProps = {
     {
       image: learnCode2,
       alt: "Computer with code on screen",
-      text: "Learn React",
+      text: "Teen GPT Bible",
       link: "https://github.com/OysteinKoder/react_lessons",
       ariaLabel: "Link to github repo",
     },
@@ -43,10 +43,14 @@ interface Props {
 
 const ProjectCarousel: FC<Props> = (props) => {
   return (
-    <div ref={props.reference}>
+    <div ref={props.reference} style={{ width: "80%", margin: "auto" }}>
       <SubTitle>Prosjekter</SubTitle>
       <MarginSpacer size="medium" />
-      <Carousel showIndicators={false} dynamicHeight={false}>
+      <Carousel
+        showIndicators={false}
+        dynamicHeight={false}
+        infiniteLoop={true}
+      >
         {projects.projects.map((project, idx) => {
           return (
             <div key={idx}>
