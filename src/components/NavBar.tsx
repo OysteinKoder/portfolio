@@ -41,10 +41,10 @@ const NavBar: FC<NavBarContainerProps> = ({
       <Button onClick={toProjects}>
         Prosjekter <AiFillFolder />
       </Button>
-      <Button onClick={toggleCollapsed}>Github ⚙️</Button>
       <Button onClick={toContact}>
         Kontakt <AiFillMail />
       </Button>
+      <Button onClick={toggleCollapsed}>Github ⚙️</Button>
     </NavBarContainer>
   );
 };

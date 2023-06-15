@@ -30,7 +30,8 @@ export const StyledInputSend = styled.input`
   font-size: 1.5rem;
   border-radius: 5px;
   border: none;
-  padding: 0 0.5rem;
   width: 5rem;
+  background-color: field;
+  color: rgb(134, 245, 145);
 `;
 export const StyledContainer = styled.div``;

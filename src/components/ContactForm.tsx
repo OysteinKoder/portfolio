@@ -42,7 +42,6 @@ export const Contact: FC<Props> = (props) => {
       <SubTitle>Ta Kontakt</SubTitle>
       <MarginSpacer size="medium" />
       <FlexWrapper direction="row" width="medium" margin="auto">
-        <AiOutlineMail size="65%" />
         <StyledForm ref={form} onSubmit={sendEmail}>
           <StyledInput type="text" name="navn" placeholder="Navn..." />
 

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { StyledImage } from "./common";
+import { StyledImage, StyledLink } from "./common";
 import learnCode2 from "../assets/learnCode2.jpg";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -44,9 +44,9 @@ interface Props {
 const ProjectCarousel: FC<Props> = (props) => {
   return (
     <div ref={props.reference}>
-      <SubTitle>Projects</SubTitle>
+      <SubTitle>Prosjekter</SubTitle>
       <MarginSpacer size="medium" />
-      <Carousel>
+      <Carousel showIndicators={false} dynamicHeight={false}>
         {projects.projects.map((project, idx) => {
           return (
             <div key={idx}>
@@ -57,15 +57,14 @@ const ProjectCarousel: FC<Props> = (props) => {
                   alt="placeholder"
                 />
                 <p>
-                  <a
+                  <StyledLink
                     href="https://github.com/OysteinKoder/react_lessons"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={project.ariaLabel}
                   >
-                    {project.text}
-                    <GoLinkExternal />
-                  </a>
+                    {project.text} <GoLinkExternal />
+                  </StyledLink>
                 </p>
               </div>
             </div>
