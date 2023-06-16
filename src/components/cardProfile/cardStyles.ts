@@ -12,7 +12,7 @@ export const StyledCard = styled.section`
   @media only screen and (max-width: 1400px) {
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr auto auto auto;
-    min-height: 100%;
+
     grid-row-gap: 5rem;
   }
 `;
