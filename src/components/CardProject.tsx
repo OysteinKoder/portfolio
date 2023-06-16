@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { StyledImage } from "./common";
+import { StyledImage, StyledLink } from "./common";
 import learnCode2 from "../assets/learnCode2.jpg";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -30,7 +30,7 @@ const projects: ProjectsProps = {
     {
       image: learnCode2,
       alt: "Computer with code on screen",
-      text: "Learn React",
+      text: "Teen GPT Bible",
       link: "https://github.com/OysteinKoder/react_lessons",
       ariaLabel: "Link to github repo",
     },
@@ -43,10 +43,13 @@ interface Props {
 
 const ProjectCarousel: FC<Props> = (props) => {
   return (
-    <div ref={props.reference}>
-      <SubTitle>Projects</SubTitle>
+    <div
+      ref={props.reference}
+      style={{ width: "80%", margin: "auto", zIndex: "-1" }}
+    >
+      <SubTitle>Prosjekter</SubTitle>
       <MarginSpacer size="medium" />
-      <Carousel>
+      <Carousel showIndicators={false} infiniteLoop={true} showThumbs={false}>
         {projects.projects.map((project, idx) => {
           return (
             <div key={idx}>
@@ -56,18 +59,18 @@ const ProjectCarousel: FC<Props> = (props) => {
                   src={project.image}
                   alt="placeholder"
                 />
-                <p>
-                  <a
-                    href="https://github.com/OysteinKoder/react_lessons"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={project.ariaLabel}
-                  >
-                    {project.text}
-                    <GoLinkExternal />
-                  </a>
-                </p>
               </div>
+              <MarginSpacer size="medium" />
+              <p>
+                <StyledLink
+                  href="https://github.com/OysteinKoder/react_lessons"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={project.ariaLabel}
+                >
+                  {project.text} <GoLinkExternal />
+                </StyledLink>
+              </p>
             </div>
           );
         })}

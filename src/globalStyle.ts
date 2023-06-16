@@ -43,6 +43,10 @@ body {
   color: #86F591;
 }
 
+main {
+  padding: 1rem;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

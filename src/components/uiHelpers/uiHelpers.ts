@@ -9,6 +9,7 @@ interface FlexProps {
   marginRight?: "small" | "medium" | "large";
   width?: "medium";
   margin?: "auto";
+  leftOnMobile?: boolean;
 }
 
 interface MainContentProps {
@@ -54,7 +55,7 @@ export const FlexWrapper = styled.div<FlexProps>`
 
   column-gap: 2rem;
   @media only screen and (max-width: 1400px) {
-    margin-left: 0;
+    margin-left: ${(props) => (props.leftOnMobile == false ? "null" : "0")};
   }
 `;
 

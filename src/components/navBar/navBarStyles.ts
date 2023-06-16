@@ -10,10 +10,11 @@ export const NavBarContainer = styled.nav<NavBarProps>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 10rem;
+  width: 12rem;
   height: 100vh;
   margin-left: 0;
   border-right: 1px solid #86f591;
+  z-index: 1;
 
   @media only screen and (max-width: 1400px) {
     flex: ${(props) => (props.collapsed == true ? "0%" : "50%")};
@@ -44,9 +45,9 @@ export const HamburgerContainer = styled.div`
 
   @media only screen and (max-width: 1400px) {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     margin-top: 1rem;
-    margin-left: 1rem;
+    margin-right: 1rem;
     height: fit-content;
   }
 `;
