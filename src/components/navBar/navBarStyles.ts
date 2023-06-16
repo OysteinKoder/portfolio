@@ -14,6 +14,7 @@ export const NavBarContainer = styled.nav<NavBarProps>`
   height: 100vh;
   margin-left: 0;
   border-right: 1px solid #86f591;
+  z-index: 1;
 
   @media only screen and (max-width: 1400px) {
     flex: ${(props) => (props.collapsed == true ? "0%" : "50%")};

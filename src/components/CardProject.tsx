@@ -43,7 +43,10 @@ interface Props {
 
 const ProjectCarousel: FC<Props> = (props) => {
   return (
-    <div ref={props.reference} style={{ width: "80%", margin: "auto" }}>
+    <div
+      ref={props.reference}
+      style={{ width: "80%", margin: "auto", zIndex: "-1" }}
+    >
       <SubTitle>Prosjekter</SubTitle>
       <MarginSpacer size="medium" />
       <Carousel showIndicators={false} infiniteLoop={true} showThumbs={false}>
