@@ -3,12 +3,7 @@ import { NavBarContainer } from "./navBar/navBarStyles";
 import { Button } from "./Button";
 import { CollapsedContext } from "../context/globalContext";
 import { useContext } from "react";
-import {
-  AiFillGithub,
-  AiFillHome,
-  AiFillMail,
-  AiOutlineMail,
-} from "react-icons/ai";
+import { AiFillGithub, AiFillHome, AiFillMail } from "react-icons/ai";
 import { AiFillFolder } from "react-icons/ai";
 import { StyledLink } from "./common";
 
@@ -27,18 +22,19 @@ const NavBar: FC<NavBarContainerProps> = ({
 }) => {
   const { toggleCollapsed } = useContext(CollapsedContext);
   const toProfile = () => {
-    toggleCollapsed;
-
     profileRef.current?.scrollIntoView({ behavior: "smooth" });
+    toggleCollapsed();
   };
   const toProjects = () => {
-    toggleCollapsed;
-
     projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+    toggleCollapsed();
+    console.log("hey");
   };
   const toContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
+    toggleCollapsed();
   };
+
   return (
     <NavBarContainer collapsed={collapsed}>
       <Button onClick={toProfile}>

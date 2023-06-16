@@ -46,7 +46,7 @@ const ProjectCarousel: FC<Props> = (props) => {
     <div ref={props.reference} style={{ width: "80%", margin: "auto" }}>
       <SubTitle>Prosjekter</SubTitle>
       <MarginSpacer size="medium" />
-      <Carousel showIndicators={false} infiniteLoop={true}>
+      <Carousel showIndicators={false} infiniteLoop={true} showThumbs={false}>
         {projects.projects.map((project, idx) => {
           return (
             <div key={idx}>

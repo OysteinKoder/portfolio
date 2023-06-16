@@ -14,6 +14,7 @@ import ProjectCarousel from "../components/CardProject";
 import { MarginSpacer } from "../components/uiHelpers/uiHelpers";
 import { useRef } from "react";
 import { Contact as ContactForm } from "../components/ContactForm";
+
 const layerOnTop: React.CSSProperties = {
   zIndex: 3,
   position: "fixed",
