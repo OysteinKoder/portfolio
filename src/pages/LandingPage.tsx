@@ -29,7 +29,7 @@ function LandingPage() {
     <>
       <FlexWrapper direction="row">
         <NavBar
-          collapsed={isCollapsed}
+          isCollapsed={isCollapsed}
           projectsRef={carouselRef}
           profileRef={profileRef}
           contactRef={contactRef}

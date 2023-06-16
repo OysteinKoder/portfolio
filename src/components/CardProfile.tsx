@@ -14,8 +14,8 @@ import { FlexWrapper } from "./uiHelpers/uiHelpers";
 // It has 4 different "grid sections", see cardprops for more information.
 
 const skills = {
-  colors: ["#9aebff", "#a4f4c4", "#faf4a4", "#f78db3"],
-  tech: ["C#", "Vue.js", ".Net Core", "Tailwind"],
+  colors: ["#9aebff", "#a4f4c4", "#faf4a4", "#f78db3", "#b68fff"],
+  tech: ["C#", "Vue.js", ".Net Core", "Tailwind", "Sql"],
 };
 const technologies = {
   colors: ["#9aebff", "#a4f4c4", "#faf4a4", "#f78db3", "#b68fff", "#ff9b8f"],

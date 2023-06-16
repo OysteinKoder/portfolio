@@ -8,19 +8,18 @@ import { AiFillFolder } from "react-icons/ai";
 import { StyledLink } from "./common";
 
 interface NavBarContainerProps {
-  collapsed: boolean;
+  isCollapsed: boolean;
   profileRef: React.RefObject<HTMLDivElement>;
   projectsRef: React.RefObject<HTMLDivElement>;
   contactRef: React.RefObject<HTMLDivElement>;
 }
 
 const NavBar: FC<NavBarContainerProps> = ({
-  collapsed,
   projectsRef: projectsRef,
   profileRef: profileRef,
   contactRef: contactRef,
 }) => {
-  const { toggleCollapsed } = useContext(CollapsedContext);
+  const { toggleCollapsed, isCollapsed } = useContext(CollapsedContext);
   const toProfile = () => {
     profileRef.current?.scrollIntoView({ behavior: "smooth" });
     toggleCollapsed();
@@ -36,7 +35,7 @@ const NavBar: FC<NavBarContainerProps> = ({
   };
 
   return (
-    <NavBarContainer collapsed={collapsed}>
+    <NavBarContainer collapsed={isCollapsed}>
       <Button onClick={toProfile}>
         Om Meg <AiFillHome />
       </Button>
