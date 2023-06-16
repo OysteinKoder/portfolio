@@ -17,7 +17,7 @@ const skills = {
   colors: ["#9aebff", "#a4f4c4", "#faf4a4", "#f78db3", "#b68fff"],
   tech: ["C#", "Vue.js", ".Net Core", "Tailwind", "Sql"],
 };
-const technologies = {
+const exploringSkills = {
   colors: ["#9aebff", "#a4f4c4", "#faf4a4", "#f78db3", "#b68fff", "#ff9b8f"],
   tech: [
     "# TypeScript ❤️",
@@ -54,7 +54,7 @@ const ProfileCard: FC<CardProps> = ({ props: props, reference }) => {
         <CardHeading>{props.bottomLeftTitle}</CardHeading>
         <FlexWrapper direction="row" flexWrap="wrap">
           {props.bottomLeftText.map((tech: any, idx: number) => (
-            <StyledTechP color={technologies.colors[idx]} key={idx}>
+            <StyledTechP color={exploringSkills.colors[idx]} key={idx}>
               {tech}
             </StyledTechP>
           ))}

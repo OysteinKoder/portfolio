@@ -12,25 +12,17 @@ export const StyledCard = styled.section`
   @media only screen and (max-width: 1400px) {
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr auto auto auto;
-
     grid-row-gap: 5rem;
   }
 `;
 
-export const Testbox = styled.div`
-  background-color: purple;
-  height: 100%;
-  width: 100%;
-`;
-
-export const StyledCardImage = styled.img<{ variant?: "project" }>`
+export const StyledCardImage = styled.img`
   object-fit: contain;
   border-radius: 50%;
   margin: auto;
   @media only screen and (max-width: 1400px) {
     width: 85%;
   }
-  grid-row: ${(props) => (props.variant === "project" ? "1/3" : "1/2")};
   width: 65% !important;
 `;
 

@@ -66,12 +66,6 @@ export const MainContent = styled.main<MainContentProps>`
     flex: ${(props) => (props.collapsed == true ? "100%" : "50%")};
   }
 `;
-export const LineSeparator = styled.div`
-  width: 80%;
-  margin: auto;
-  margin-top: 1rem;
-  border-bottom: 1px solid #86f591;
-`;
 
 export const MarginSpacer = styled.div<{ size: "small" | "medium" | "large" }>`
   margin-top: ${(props) =>

@@ -38,7 +38,7 @@ export const Contact: FC<Props> = (props) => {
   };
 
   return (
-    <div ref={props.reference}>
+    <section ref={props.reference}>
       <SubTitle>Ta Kontakt</SubTitle>
       <MarginSpacer size="medium" />
       <FlexWrapper
@@ -64,6 +64,6 @@ export const Contact: FC<Props> = (props) => {
           <StyledInputSend type="submit" value="Send" />
         </StyledForm>
       </FlexWrapper>
-    </div>
+    </section>
   );
 };

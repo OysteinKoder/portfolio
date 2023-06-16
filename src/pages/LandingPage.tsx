@@ -43,7 +43,7 @@ function LandingPage() {
               style={layerOnTop}
             />
           </HamburgerContainer>
-          <ProfileCard props={cardContent[0]} reference={profileRef} />
+          <ProfileCard props={cardContent} reference={profileRef} />
           <MarginSpacer size="large" />
           <ProjectCarousel reference={carouselRef} />
           <MarginSpacer size="large" />

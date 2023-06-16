@@ -43,7 +43,7 @@ interface Props {
 
 const ProjectCarousel: FC<Props> = (props) => {
   return (
-    <div
+    <section
       ref={props.reference}
       style={{ width: "80%", margin: "auto", zIndex: "-1" }}
     >
@@ -75,7 +75,7 @@ const ProjectCarousel: FC<Props> = (props) => {
           );
         })}
       </Carousel>
-    </div>
+    </section>
   );
 };
 
