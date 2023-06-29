@@ -2,9 +2,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import Nav from "../components/NavBar";
 
-import Projects from "../components/CardProject";
+import Projects from "../components/Projects";
 
-import Profile from "../components/CardProfile";
+import Profile from "../components/Profile";
 
 import { Hamburger, NavFrame } from "../components/navBar/navBarStyles";
 
@@ -18,11 +18,9 @@ import { CollapsedContext } from "../context/globalContext";
 
 import { cardContent } from "./cardContent/cardContent";
 
-import { Spacer } from "../components/uiHelpers/uiHelpers";
-
 import { useRef } from "react";
 
-import { Contact } from "../components/ContactForm";
+import { Contact } from "../components/Contact";
 
 const layerOnTop: React.CSSProperties = {
   zIndex: 3,
