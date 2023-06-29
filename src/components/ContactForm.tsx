@@ -7,7 +7,7 @@ import {
   StyledTextArea,
 } from "./formStyles";
 import { SubTitle } from "./cardProfile/cardStyles";
-import { FlexWrapper, MarginSpacer } from "./uiHelpers/uiHelpers";
+import { Wrapper, Spacer } from "./uiHelpers/uiHelpers";
 import { AiOutlineMail } from "react-icons/ai";
 
 interface Props {
@@ -38,32 +38,42 @@ export const Contact: FC<Props> = (props) => {
   };
 
   return (
-    <section ref={props.reference}>
-      <SubTitle>Ta Kontakt</SubTitle>
-      <MarginSpacer size="medium" />
-      <FlexWrapper
-        leftOnMobile={false}
-        direction="column"
-        width="medium"
-        margin="auto"
-      >
-        <StyledForm ref={form} onSubmit={sendEmail}>
-          <StyledInput required type="text" name="navn" placeholder="Navn..." />
-
-          <StyledTextArea required name="melding" placeholder="Melding..." />
-
-          <StyledInput
-            type="tel"
-            pattern="[0-9]{8}"
-            required
-            name="tlf"
-            placeholder="Tlf..."
-          />
-
-          <StyledInput required type="email" name="email" placeholder="Email" />
-          <StyledInputSend type="submit" value="Send" />
-        </StyledForm>
-      </FlexWrapper>
-    </section>
+    <>
+      <Spacer size="large" />
+      <section ref={props.reference}>
+        <SubTitle>Ta Kontakt</SubTitle>
+        <Spacer size="medium" />
+        <Wrapper
+          leftOnMobile={false}
+          direction="column"
+          width="medium"
+          margin="auto"
+        >
+          <StyledForm ref={form} onSubmit={sendEmail}>
+            <StyledInput
+              required
+              type="text"
+              name="navn"
+              placeholder="Navn..."
+            />
+            <StyledTextArea required name="melding" placeholder="Melding..." />
+            <StyledInput
+              type="tel"
+              pattern="[0-9]{8}"
+              required
+              name="tlf"
+              placeholder="Tlf..."
+            />
+            <StyledInput
+              required
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
+            <StyledInputSend type="submit" value="Send" />
+          </StyledForm>
+        </Wrapper>
+      </section>
+    </>
   );
 };

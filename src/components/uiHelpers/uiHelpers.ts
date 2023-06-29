@@ -16,7 +16,7 @@ interface MainContentProps {
   collapsed: boolean;
 }
 
-export const FlexWrapper = styled.div<FlexProps>`
+export const Wrapper = styled.div<FlexProps>`
   display: flex;
   flex-direction: ${(props) =>
     props.direction == "row"
@@ -59,7 +59,7 @@ export const FlexWrapper = styled.div<FlexProps>`
   }
 `;
 
-export const MainContent = styled.main<MainContentProps>`
+export const Main = styled.main<MainContentProps>`
   flex: 85%;
 
   @media only screen and (max-width: 600px) {
@@ -67,7 +67,7 @@ export const MainContent = styled.main<MainContentProps>`
   }
 `;
 
-export const MarginSpacer = styled.div<{ size: "small" | "medium" | "large" }>`
+export const Spacer = styled.div<{ size: "small" | "medium" | "large" }>`
   margin-top: ${(props) =>
     props.size == "small"
       ? "1rem"

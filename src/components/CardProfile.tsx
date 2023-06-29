@@ -7,7 +7,7 @@ import {
   StyledTechP,
 } from "./cardProfile/cardStyles";
 import { FC } from "react";
-import { FlexWrapper } from "./uiHelpers/uiHelpers";
+import { Wrapper } from "./uiHelpers/uiHelpers";
 
 // This is a card component that can be used to display information in a card format.
 // It has serval different props that can be used to display different information.
@@ -42,38 +42,43 @@ interface CardProps {
   reference: React.RefObject<HTMLDivElement>;
 }
 
-const ProfileCard: FC<CardProps> = ({ props: props, reference }) => {
+const Profile: FC<CardProps> = ({ props: props, reference }) => {
   return (
-    <StyledCard ref={reference}>
-      <StyledCardImage src={props.topLeftImage} alt={props.topLeftImageAlt} />
-      <CardSection>
-        <CardTitle>{props.topRightTitle}</CardTitle>
-        <p>{props.topRightText}</p>
-      </CardSection>
-      <CardSection>
-        <CardHeading>{props.bottomLeftTitle}</CardHeading>
-        <FlexWrapper direction="row" flexWrap="wrap">
-          {props.bottomLeftText.map((tech: any, idx: number) => (
-            <StyledTechP color={exploringSkills.colors[idx]} key={idx}>
-              {tech}
-            </StyledTechP>
-          ))}
-        </FlexWrapper>
-      </CardSection>
-      <CardSection>
-        <div>
-          <CardHeading>{props.bottomRightTitle}</CardHeading>
-          <FlexWrapper direction="row" flexWrap="wrap" marginLeft="small">
-            {skills.tech.map((skill, idx) => (
-              <StyledTechP color={skills.colors[idx]} key={skills.colors[idx]}>
-                {skill}
+    <>
+      <StyledCard ref={reference}>
+        <StyledCardImage src={props.topLeftImage} alt={props.topLeftImageAlt} />
+        <CardSection>
+          <CardTitle>{props.topRightTitle}</CardTitle>
+          <p>{props.topRightText}</p>
+        </CardSection>
+        <CardSection>
+          <CardHeading>{props.bottomLeftTitle}</CardHeading>
+          <Wrapper direction="row" flexWrap="wrap">
+            {props.bottomLeftText.map((tech: any, idx: number) => (
+              <StyledTechP color={exploringSkills.colors[idx]} key={idx}>
+                {tech}
               </StyledTechP>
             ))}
-          </FlexWrapper>
-        </div>
-      </CardSection>
-    </StyledCard>
+          </Wrapper>
+        </CardSection>
+        <CardSection>
+          <div>
+            <CardHeading>{props.bottomRightTitle}</CardHeading>
+            <Wrapper direction="row" flexWrap="wrap" marginLeft="small">
+              {skills.tech.map((skill, idx) => (
+                <StyledTechP
+                  color={skills.colors[idx]}
+                  key={skills.colors[idx]}
+                >
+                  {skill}
+                </StyledTechP>
+              ))}
+            </Wrapper>
+          </div>
+        </CardSection>
+      </StyledCard>
+    </>
   );
 };
 
-export default ProfileCard;
+export default Profile;

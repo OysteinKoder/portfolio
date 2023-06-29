@@ -5,7 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { SubTitle } from "./cardProfile/cardStyles";
 import { GoLinkExternal } from "react-icons/go";
-import { MarginSpacer } from "./uiHelpers/uiHelpers";
+import { Spacer } from "./uiHelpers/uiHelpers";
 
 interface ProjectsProps {
   projects: {
@@ -48,7 +48,7 @@ const ProjectCarousel: FC<Props> = (props) => {
       style={{ width: "80%", margin: "auto", zIndex: "-1" }}
     >
       <SubTitle>Prosjekter</SubTitle>
-      <MarginSpacer size="medium" />
+      <Spacer size="large" />
       <Carousel showIndicators={false} infiniteLoop={true} showThumbs={false}>
         {projects.projects.map((project, idx) => {
           return (
@@ -60,7 +60,7 @@ const ProjectCarousel: FC<Props> = (props) => {
                   alt="placeholder"
                 />
               </div>
-              <MarginSpacer size="medium" />
+              <Spacer size="medium" />
               <p>
                 <StyledLink
                   href="https://github.com/OysteinKoder/react_lessons"
