@@ -41,42 +41,45 @@ interface Props {
   reference: React.RefObject<HTMLDivElement>;
 }
 
-const ProjectCarousel: FC<Props> = (props) => {
+const Projects: FC<Props> = (props) => {
   return (
-    <section
-      ref={props.reference}
-      style={{ width: "80%", margin: "auto", zIndex: "-1" }}
-    >
-      <SubTitle>Prosjekter</SubTitle>
+    <>
       <Spacer size="large" />
-      <Carousel showIndicators={false} infiniteLoop={true} showThumbs={false}>
-        {projects.projects.map((project, idx) => {
-          return (
-            <div key={idx}>
-              <div>
-                <StyledImage
-                  size="medium"
-                  src={project.image}
-                  alt="placeholder"
-                />
+      <section
+        ref={props.reference}
+        style={{ width: "80%", margin: "auto", zIndex: "-1" }}
+      >
+        <SubTitle>Prosjekter</SubTitle>
+        <Spacer size="large" />
+        <Carousel showIndicators={false} infiniteLoop={true} showThumbs={false}>
+          {projects.projects.map((project, idx) => {
+            return (
+              <div key={idx}>
+                <div>
+                  <StyledImage
+                    size="medium"
+                    src={project.image}
+                    alt="placeholder"
+                  />
+                </div>
+                <Spacer size="medium" />
+                <p>
+                  <StyledLink
+                    href="https://github.com/OysteinKoder/react_lessons"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={project.ariaLabel}
+                  >
+                    {project.text} <GoLinkExternal />
+                  </StyledLink>
+                </p>
               </div>
-              <Spacer size="medium" />
-              <p>
-                <StyledLink
-                  href="https://github.com/OysteinKoder/react_lessons"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={project.ariaLabel}
-                >
-                  {project.text} <GoLinkExternal />
-                </StyledLink>
-              </p>
-            </div>
-          );
-        })}
-      </Carousel>
-    </section>
+            );
+          })}
+        </Carousel>
+      </section>
+    </>
   );
 };
 
-export default ProjectCarousel;
+export default Projects;
