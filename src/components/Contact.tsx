@@ -8,7 +8,6 @@ import {
 } from "./formStyles";
 import { SubTitle } from "./cardProfile/cardStyles";
 import { Wrapper, Spacer } from "./uiHelpers/uiHelpers";
-import { AiOutlineMail } from "react-icons/ai";
 
 interface Props {
   reference: React.RefObject<HTMLDivElement>;
