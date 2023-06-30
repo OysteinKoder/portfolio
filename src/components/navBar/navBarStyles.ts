@@ -20,7 +20,7 @@ export const NavBarContainer = styled.nav<NavBarProps>`
     flex: ${(props) => (props.collapsed == true ? "0%" : "50%")};
     display: ${(props) => (props.collapsed == true ? "none" : "flex")};
     position: fixed;
-    background: rgb(26 25 25);
+    background-color: rgb(30, 30, 30);
   }
 `;
 

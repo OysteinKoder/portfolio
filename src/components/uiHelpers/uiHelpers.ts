@@ -61,10 +61,7 @@ export const Wrapper = styled.div<FlexProps>`
 
 export const Main = styled.main<MainContentProps>`
   flex: 85%;
-
-  @media only screen and (max-width: 600px) {
-    flex: ${(props) => (props.collapsed == true ? "100%" : "50%")};
-  }
+  padding: 0.25rem;
 `;
 
 export const Spacer = styled.div<{ size: "small" | "medium" | "large" }>`

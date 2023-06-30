@@ -1,16 +1,10 @@
 import styled from "styled-components";
 
-export const StyledImage = styled.img<{ size: "small" | "medium" | "large" }>`
-  width: ${(props) =>
-    props.size == "small"
-      ? "30% !important"
-      : props.size == "medium"
-      ? "50% !important"
-      : props.size == "large"
-      ? "100% !important"
-      : null};
+export const StyledImage = styled.img`
+  padding: 3rem;
+  height: 40vh;
   object-fit: contain;
-  border-radius: 10px;
+  background-color: rgb(30, 30, 30);
 `;
 
 export const StyledLink = styled.a`
@@ -22,4 +16,8 @@ export const StyledLink = styled.a`
   margin: 0.5em;
   margin-top: 5rem;
   padding: 0.5em;
+
+  &:hover {
+    color: green;
+  }
 `;
