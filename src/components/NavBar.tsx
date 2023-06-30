@@ -3,9 +3,10 @@ import { NavBarContainer } from "./navBar/navBarStyles";
 import { Button } from "./Button";
 import { CollapsedContext } from "../context/globalContext";
 import { useContext } from "react";
-import { AiFillGithub, AiFillHome, AiFillMail } from "react-icons/ai";
+import { AiFillHome, AiFillMail } from "react-icons/ai";
 import { AiFillFolder } from "react-icons/ai";
 import { StyledLink } from "./common";
+import { GoLinkExternal } from "react-icons/go";
 
 interface NavBarContainerProps {
   isCollapsed: boolean;
@@ -14,21 +15,24 @@ interface NavBarContainerProps {
   contactRef: React.RefObject<HTMLDivElement>;
 }
 
-const NavBar: FC<NavBarContainerProps> = ({
+const Nav: FC<NavBarContainerProps> = ({
   projectsRef: projectsRef,
   profileRef: profileRef,
   contactRef: contactRef,
 }) => {
   const { toggleCollapsed, isCollapsed } = useContext(CollapsedContext);
+
   const toProfile = () => {
     profileRef.current?.scrollIntoView({ behavior: "smooth" });
     toggleCollapsed();
   };
+
   const toProjects = () => {
     projectsRef.current?.scrollIntoView({ behavior: "smooth" });
     toggleCollapsed();
     console.log("hey");
   };
+
   const toContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
     toggleCollapsed();
@@ -46,10 +50,10 @@ const NavBar: FC<NavBarContainerProps> = ({
         Kontakt <AiFillMail />
       </Button>
       <StyledLink onClick={toggleCollapsed}>
-        Github <AiFillGithub />
+        Github <GoLinkExternal />
       </StyledLink>
     </NavBarContainer>
   );
 };
 
-export default NavBar;
+export default Nav;

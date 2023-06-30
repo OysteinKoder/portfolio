@@ -24,7 +24,7 @@ export const NavBarContainer = styled.nav<NavBarProps>`
   }
 `;
 
-export const Positioner = styled.div<NavBarProps>`
+export const NavFrame = styled.div<NavBarProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +40,7 @@ export const Positioner = styled.div<NavBarProps>`
   }
 `;
 
-export const HamburgerContainer = styled.div`
+export const Hamburger = styled.div`
   display: none;
 
   @media only screen and (max-width: 1400px) {

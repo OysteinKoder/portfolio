@@ -16,7 +16,7 @@ interface MainContentProps {
   collapsed: boolean;
 }
 
-export const FlexWrapper = styled.div<FlexProps>`
+export const Wrapper = styled.div<FlexProps>`
   display: flex;
   flex-direction: ${(props) =>
     props.direction == "row"
@@ -59,21 +59,15 @@ export const FlexWrapper = styled.div<FlexProps>`
   }
 `;
 
-export const MainContent = styled.main<MainContentProps>`
+export const Main = styled.main<MainContentProps>`
   flex: 85%;
 
   @media only screen and (max-width: 600px) {
     flex: ${(props) => (props.collapsed == true ? "100%" : "50%")};
   }
 `;
-export const LineSeparator = styled.div`
-  width: 80%;
-  margin: auto;
-  margin-top: 1rem;
-  border-bottom: 1px solid #86f591;
-`;
 
-export const MarginSpacer = styled.div<{ size: "small" | "medium" | "large" }>`
+export const Spacer = styled.div<{ size: "small" | "medium" | "large" }>`
   margin-top: ${(props) =>
     props.size == "small"
       ? "1rem"
