@@ -7,7 +7,9 @@ import {
   StyledTextArea,
 } from "./formStyles";
 import { SubTitle } from "./cardProfile/cardStyles";
-import { Wrapper, Spacer } from "./uiHelpers/uiHelpers";
+import { Wrapper, Spacer, StyledSection } from "./uiHelpers/uiHelpers";
+import { useState } from "react";
+import { GoCheck } from "react-icons/go";
 
 interface Props {
   reference: React.RefObject<HTMLDivElement>;
@@ -15,6 +17,8 @@ interface Props {
 
 export const Contact: FC<Props> = (props) => {
   const form: any = useRef();
+
+  const [emailState, setEmailState] = useState(Boolean);
   const sendEmail = (e: { preventDefault: () => void; target: any }) => {
     e.preventDefault();
 
@@ -28,6 +32,7 @@ export const Contact: FC<Props> = (props) => {
       .then(
         (result: { text: string }) => {
           console.log(result.text);
+          setEmailState(true);
         },
         (error: { text: string }) => {
           console.log(error.text);
@@ -39,15 +44,10 @@ export const Contact: FC<Props> = (props) => {
   return (
     <>
       <Spacer size="large" />
-      <section ref={props.reference}>
+      <StyledSection ref={props.reference}>
         <SubTitle>Ta Kontakt</SubTitle>
         <Spacer size="medium" />
-        <Wrapper
-          leftOnMobile={false}
-          direction="column"
-          width="medium"
-          margin="auto"
-        >
+        <Wrapper leftOnMobile={false} direction="column" margin="auto">
           <StyledForm ref={form} onSubmit={sendEmail}>
             <StyledInput
               required
@@ -69,10 +69,13 @@ export const Contact: FC<Props> = (props) => {
               name="email"
               placeholder="Email"
             />
-            <StyledInputSend type="submit" value="Send" />
+            <Wrapper direction="row">
+              <StyledInputSend type="submit" value="Send" onSubmit={() => {}} />
+              {emailState ? <GoCheck size={"1.5rem"} /> : <></>}
+            </Wrapper>
           </StyledForm>
         </Wrapper>
-      </section>
+      </StyledSection>
     </>
   );
 };
