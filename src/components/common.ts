@@ -4,7 +4,6 @@ export const StyledImage = styled.img`
   padding: 3rem;
   height: 40vh;
   object-fit: contain;
-  background-color: rgb(30, 30, 30);
 `;
 
 export const StyledLink = styled.a`

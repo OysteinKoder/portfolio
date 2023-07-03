@@ -33,9 +33,9 @@ export const CardTitle = styled.h1`
 `;
 
 export const SubTitle = styled.h2`
-  font-size: 2rem;
-  padding: 0 1rem 1rem 1rem;
-  width: fit-content;
+  font-size: 1.5rem;
+  padding: 1rem 1rem 1rem 1rem;
+  width: auto;
   margin: auto;
 `;
 

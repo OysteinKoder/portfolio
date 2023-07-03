@@ -74,3 +74,16 @@ export const Spacer = styled.div<{ size: "small" | "medium" | "large" }>`
       ? "10rem"
       : null};
 `;
+
+interface StyledSectionProps {
+  color?: "black" | "grey";
+}
+
+export const StyledSection = styled.section<StyledSectionProps>`
+  margin: auto;
+  z-index: -1;
+  background-color: ${(props) =>
+    props.color == "black" ? "rgb(25, 25, 25)" : "null"};
+  border-radius: 3px;
+  padding: 5rem 10% 5rem 10%;
+`;

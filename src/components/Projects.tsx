@@ -7,7 +7,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { SubTitle } from "./cardProfile/cardStyles";
 import { GoLinkExternal } from "react-icons/go";
-import { Spacer } from "./uiHelpers/uiHelpers";
+import { Spacer, StyledSection } from "./uiHelpers/uiHelpers";
 
 interface ProjectsProps {
   projects: {
@@ -54,10 +54,7 @@ const Projects: FC<Props> = (props) => {
   return (
     <>
       <Spacer size="large" />
-      <section
-        ref={props.reference}
-        style={{ width: "80%", margin: "auto", zIndex: "-1" }}
-      >
+      <StyledSection ref={props.reference} color="black">
         <SubTitle>Prosjekter</SubTitle>
         <Spacer size="medium" />
         <Carousel
@@ -83,7 +80,7 @@ const Projects: FC<Props> = (props) => {
             );
           })}
         </Carousel>
-      </section>
+      </StyledSection>
     </>
   );
 };
