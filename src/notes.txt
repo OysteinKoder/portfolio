@@ -1,1 +1,3 @@
+- look at the width/margin on mobile for section styles
+
 

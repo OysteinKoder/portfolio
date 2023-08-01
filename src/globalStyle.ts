@@ -2,11 +2,17 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
-html {
-  width: 100vw;
+#root {
+  width: 100%;
   height: 100vh;
   margin: 0 auto;
+}
+
+html {
+  margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
+
+  text-align: center;
   line-height: 1.5;
   font-weight: 600;
   font-size: 1.25rem;
@@ -57,7 +63,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -68,29 +74,15 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
-
-#root {
-  width: 100%;
-  height: 100vh;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+} */
 
 .card {
   padding: 2em;
+}
+
+@media screen and (min-width: 2440px) {
+  html {
+    width: 2440px;
+  }
 }
 `;
