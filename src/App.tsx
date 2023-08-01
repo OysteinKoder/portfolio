@@ -8,7 +8,6 @@ function App() {
 
   const toggleCollapsed = () => {
     setIsCollapsed(!isCollapsed);
-    console.log(isCollapsed);
   };
 
   return (
