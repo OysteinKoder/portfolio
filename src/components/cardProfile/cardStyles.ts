@@ -42,7 +42,6 @@ export const SubTitle = styled.h2`
 export const CardHeading = styled.h3`
   font-size: 1.5rem;
   padding-bottom: 1rem;
-  width: fit-content;
   margin: auto;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
