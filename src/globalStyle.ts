@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 
 html {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
@@ -30,6 +30,7 @@ body {
 }
 
 main {
+  width: 100vw;
   padding: 1rem;
 }
 
