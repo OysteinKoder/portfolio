@@ -20,10 +20,11 @@ export const StyledCardImage = styled.img`
   object-fit: contain;
   border-radius: 50%;
   margin: auto;
-  @media only screen and (max-width: 1400px) {
+  width: 65%;
+
+  @media only screen and (max-width: 480px) {
     width: 85%;
   }
-  width: 65% !important;
 `;
 
 export const CardTitle = styled.h1`
