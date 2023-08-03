@@ -80,10 +80,13 @@ interface StyledSectionProps {
 }
 
 export const StyledSection = styled.section<StyledSectionProps>`
-  margin: auto;
   z-index: -1;
   background-color: ${(props) =>
     props.color == "black" ? "rgb(25, 25, 25)" : "null"};
   border-radius: 3px;
   padding: 5rem 10% 5rem 10%;
+
+  @media only screen and (max-width: 480px) {
+    padding: 1rem 1rem;
+  }
 `;

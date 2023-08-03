@@ -20,10 +20,11 @@ export const StyledCardImage = styled.img`
   object-fit: contain;
   border-radius: 50%;
   margin: auto;
-  @media only screen and (max-width: 1400px) {
+  width: 65%;
+
+  @media only screen and (max-width: 480px) {
     width: 85%;
   }
-  width: 65% !important;
 `;
 
 export const CardTitle = styled.h1`
@@ -42,7 +43,6 @@ export const SubTitle = styled.h2`
 export const CardHeading = styled.h3`
   font-size: 1.5rem;
   padding-bottom: 1rem;
-  width: fit-content;
   margin: auto;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;

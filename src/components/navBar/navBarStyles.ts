@@ -6,12 +6,12 @@ interface NavBarProps {
 
 export const NavBarContainer = styled.nav<NavBarProps>`
   position: fixed;
+  width: 12rem;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 12rem;
-  height: 100vh;
   margin-left: 0;
   border-right: 1px solid #86f591;
   z-index: 1;
@@ -30,7 +30,7 @@ export const NavFrame = styled.div<NavBarProps>`
   align-items: center;
   justify-content: center;
   width: 10rem;
-  height: 100vh;
+  height: 100%;
   margin-left: 0;
 
   @media only screen and (max-width: 1400px) {
