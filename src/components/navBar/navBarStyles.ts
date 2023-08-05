@@ -16,7 +16,7 @@ export const NavBarContainer = styled.nav<NavBarProps>`
   border-right: 1px solid #86f591;
   z-index: 1;
 
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: 800px) {
     flex: ${(props) => (props.collapsed == true ? "0%" : "50%")};
     display: ${(props) => (props.collapsed == true ? "none" : "flex")};
     position: fixed;
@@ -33,17 +33,37 @@ export const NavFrame = styled.div<NavBarProps>`
   height: 100%;
   margin-left: 0;
 
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: 800px) {
     flex: ${(props) => (props.collapsed == true ? "0%" : "50%")};
     display: ${(props) => (props.collapsed == true ? "none" : "flex")};
     position: fixed;
   }
 `;
 
+export const SocialMediaContainer = styled.div`
+  display: flex;
+  margin: 0.5em;
+  margin-top: 5rem;
+  padding: 0.5em;
+  font-size: 1.25rem;
+  justify-content: space-evenly;
+  width: 80%;
+`;
+
+export const SocialMediaLink = styled.a`
+  font-size: 1.5rem;
+  color: #86f591;
+  cursor: pointer;
+
+  &:hover {
+    color: #7b24c9;
+  }
+`;
+
 export const Hamburger = styled.div`
   display: none;
 
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: 800px) {
     display: flex;
     justify-content: flex-end;
     margin-top: 1rem;

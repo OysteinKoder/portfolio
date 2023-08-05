@@ -9,7 +9,7 @@ export const StyledCard = styled.section`
   grid-template-rows: 1fr 1fr;
   grid-row-gap: 2rem;
 
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: 800px) {
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr auto auto auto;
     grid-row-gap: 5rem;
