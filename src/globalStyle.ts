@@ -55,14 +55,6 @@ p {
 color: #86F591;
 }
 
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
 /* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -76,8 +68,20 @@ button:focus-visible {
   }
 } */
 
-.card {
-  padding: 2em;
+
+// Styling for the react-icons dependency
+
+.nav-icons {
+  font-size: 1.5rem;
+  vertical-align: text-bottom;
+}
+
+.social-media-icons {
+  font-size: 1.75rem;
+}
+
+:focus {
+  outline: solid white;
 }
 
 @media screen and (min-width: 2440px) {
@@ -85,4 +89,6 @@ button:focus-visible {
     width: 2440px;
   }
 }
+
+
 `;
