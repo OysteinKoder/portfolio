@@ -1,6 +1,7 @@
 import { GlobalStyle } from "./globalStyle";
 import { CollapsedContext } from "./context/globalContext";
 import { useState } from "react";
+import { IconContext } from "react-icons/lib";
 import LandingPage from "./pages/LandingPage";
 
 function App() {
@@ -13,8 +14,10 @@ function App() {
   return (
     <>
       <CollapsedContext.Provider value={{ isCollapsed, toggleCollapsed }}>
-        <GlobalStyle />
-        <LandingPage />
+        <IconContext.Provider value={{ className: "link-icons" }}>
+          <GlobalStyle />
+          <LandingPage />
+        </IconContext.Provider>
       </CollapsedContext.Provider>
     </>
   );
