@@ -56,11 +56,11 @@ export const SocialMediaLink = styled.a`
   cursor: pointer;
 
   &:hover {
-    color: #7b24c9;
+    color: rgb(182, 143, 255);
   }
 `;
 
-export const Hamburger = styled.div`
+export const HamburgerWrapper = styled.div`
   display: none;
 
   @media only screen and (max-width: 800px) {
@@ -69,5 +69,9 @@ export const Hamburger = styled.div`
     margin-top: 1rem;
     margin-right: 1rem;
     height: fit-content;
+
+    &:hover {
+      color: rgb(182, 143, 255);
+    }
   }
 `;
