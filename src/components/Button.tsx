@@ -4,11 +4,11 @@ export const Button = styled.button`
   all: unset;
   cursor: pointer;
   margin: 0.5em;
-  margin-top: 5rem;
+  margin-top: 3em;
   padding: 0.5em;
   font-size: 1.25rem;
 
-  /* :focus {
-    outline: solid red;
-  } */
+  &:hover {
+    color: rgb(182, 143, 255);
+  }
 `;
