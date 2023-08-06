@@ -6,11 +6,11 @@ import Projects from "../components/Projects";
 
 import Profile from "../components/Profile";
 
-import { Hamburger, NavFrame } from "../components/navBar/navBarStyles";
+import Hamburger from "../components/navBar/Hamburger";
+
+import { NavFrame } from "../components/navBar/navBarStyles";
 
 import { Main, Wrapper } from "../components/uiHelpers/uiHelpers";
-
-import { AiOutlineMenu } from "react-icons/ai";
 
 import { useContext } from "react";
 
@@ -22,13 +22,8 @@ import { useRef } from "react";
 
 import { Contact } from "../components/Contact";
 
-const layerOnTop: React.CSSProperties = {
-  zIndex: 3,
-  position: "fixed",
-};
-
 function LandingPage() {
-  const { isCollapsed, toggleCollapsed } = useContext(CollapsedContext);
+  const { isCollapsed } = useContext(CollapsedContext);
 
   const profileRef = useRef<HTMLDivElement>(null);
 
@@ -47,13 +42,7 @@ function LandingPage() {
           contactRef={contactRef}
         />
         <Main collapsed={isCollapsed}>
-          <Hamburger>
-            <AiOutlineMenu
-              size="2em"
-              onClick={toggleCollapsed}
-              style={layerOnTop}
-            />
-          </Hamburger>
+          <Hamburger />
           <Profile props={cardContent} reference={profileRef} />
           <Projects reference={carouselRef} />
           <Contact reference={contactRef} />
