@@ -24,6 +24,10 @@ export const NavBarContainer = styled.nav<NavBarProps>`
     width: 100%;
     padding-bottom: 10%;
   }
+
+  @media only screen and (max-width: 1400px) {
+    background-color: rgb(30, 30, 30);
+  }
 `;
 
 export const NavFrame = styled.div<NavBarProps>`
