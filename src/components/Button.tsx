@@ -6,7 +6,6 @@ export const Button = styled.button`
   margin: 0.5em;
   margin-top: 3em;
   padding: 0.5em;
-  font-size: 1.25rem;
 
   &:hover {
     color: rgb(182, 143, 255);

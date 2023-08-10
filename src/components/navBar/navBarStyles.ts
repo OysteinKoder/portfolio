@@ -16,17 +16,13 @@ export const NavBarContainer = styled.nav<NavBarProps>`
   margin-top: 0;
   border-right: 1px solid #86f591;
   z-index: 3;
+  background-color: rgb(30, 30, 30);
 
   @media only screen and (max-width: 800px) {
     display: ${(props) => (props.collapsed == true ? "none" : "flex")};
-    background-color: rgb(30, 30, 30);
     min-height: 115%;
     width: 100%;
     padding-bottom: 10%;
-  }
-
-  @media only screen and (max-width: 1400px) {
-    background-color: rgb(30, 30, 30);
   }
 `;
 
