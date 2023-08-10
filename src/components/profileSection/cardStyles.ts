@@ -30,7 +30,6 @@ export const StyledCardImage = styled.img`
 export const CardTitle = styled.h1`
   font-size: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #86f591;
 `;
 
 export const SubTitle = styled.h2`

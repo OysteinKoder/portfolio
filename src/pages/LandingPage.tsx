@@ -1,14 +1,14 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import Nav from "../components/NavBar";
+import Sidebar from "../components/NavBar";
 
-import Projects from "../components/Projects";
+import ProjectsSection from "../components/ProjectsSection";
 
-import Profile from "../components/Profile";
+import ProfileSection from "../components/ProfileSection";
 
-import Hamburger from "../components/navBar/Hamburger";
+import Hamburger from "../components/sideBar/Hamburger";
 
-import { NavFrame } from "../components/navBar/navBarStyles";
+import { SidebarFrame } from "../components/sideBar/navBarStyles";
 
 import { Main, Wrapper } from "../components/uiHelpers/uiHelpers";
 
@@ -20,12 +20,15 @@ import { cardContent } from "./cardContent/cardContent";
 
 import { useRef } from "react";
 
-import { Contact } from "../components/Contact";
+import { ContactSection } from "../components/ContactSection";
+import ExperianceSection from "../components/ExperianceSection";
 
 function LandingPage() {
   const { isCollapsed } = useContext(CollapsedContext);
 
   const profileRef = useRef<HTMLDivElement>(null);
+
+  const experianceRef = useRef<HTMLDivElement>(null);
 
   const carouselRef = useRef<HTMLDivElement>(null);
 
@@ -34,18 +37,20 @@ function LandingPage() {
   return (
     <>
       <Wrapper direction="row">
-        <NavFrame collapsed={isCollapsed} />
-        <Nav
+        <SidebarFrame collapsed={isCollapsed} />
+        <Sidebar
           isCollapsed={isCollapsed}
+          experienceRef={experianceRef}
           projectsRef={carouselRef}
           profileRef={profileRef}
           contactRef={contactRef}
         />
         <Main collapsed={isCollapsed}>
           <Hamburger />
-          <Profile props={cardContent} reference={profileRef} />
-          <Projects reference={carouselRef} />
-          <Contact reference={contactRef} />
+          <ProfileSection props={cardContent} reference={profileRef} />
+          <ExperianceSection reference={experianceRef} />
+          <ProjectsSection reference={carouselRef} />
+          <ContactSection reference={contactRef} />
         </Main>
       </Wrapper>
     </>

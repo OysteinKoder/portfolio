@@ -14,7 +14,6 @@ html {
 
   text-align: center;
   line-height: 1.5;
-  font-weight: 600;
   
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);

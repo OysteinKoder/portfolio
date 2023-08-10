@@ -5,9 +5,9 @@ import {
   StyledCard,
   StyledCardImage,
   StyledTechP,
-} from "./cardProfile/cardStyles";
+} from "./profileSection/cardStyles";
 import { FC } from "react";
-import { Wrapper } from "./uiHelpers/uiHelpers";
+import { Spacer, Wrapper } from "./uiHelpers/uiHelpers";
 
 // This is a card component that can be used to display information in a card format.
 // It has serval different props that can be used to display different information.
@@ -42,7 +42,7 @@ interface CardProps {
   reference: React.RefObject<HTMLDivElement>;
 }
 
-const Profile: FC<CardProps> = ({ props: props, reference }) => {
+const ProfileSection: FC<CardProps> = ({ props: props, reference }) => {
   return (
     <>
       <StyledCard ref={reference}>
@@ -77,8 +77,9 @@ const Profile: FC<CardProps> = ({ props: props, reference }) => {
           </div>
         </CardSection>
       </StyledCard>
+      <Spacer size="large" />
     </>
   );
 };
 
-export default Profile;
+export default ProfileSection;

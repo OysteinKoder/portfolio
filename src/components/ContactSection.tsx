@@ -5,8 +5,8 @@ import {
   StyledInput,
   StyledInputSend,
   StyledTextArea,
-} from "./formStyles";
-import { SubTitle } from "./cardProfile/cardStyles";
+} from "./contactSection/formStyles";
+import { SubTitle } from "./profileSection/cardStyles";
 import { Wrapper, Spacer, StyledSection } from "./uiHelpers/uiHelpers";
 import { useState } from "react";
 import { GoCheck } from "react-icons/go";
@@ -15,7 +15,7 @@ interface Props {
   reference: React.RefObject<HTMLDivElement>;
 }
 
-export const Contact: FC<Props> = (props) => {
+export const ContactSection: FC<Props> = (props) => {
   const form: any = useRef();
 
   const [emailState, setEmailState] = useState(Boolean);

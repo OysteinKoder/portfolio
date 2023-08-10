@@ -5,7 +5,7 @@ import jobloopImg from "../assets/jobloop_img.png";
 import gptBible from "../assets/gpt_bible.jpg";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { SubTitle } from "./cardProfile/cardStyles";
+import { SubTitle } from "./profileSection/cardStyles";
 import { GoLinkExternal } from "react-icons/go";
 import { Spacer, StyledSection } from "./uiHelpers/uiHelpers";
 
@@ -50,11 +50,11 @@ interface Props {
   reference: React.RefObject<HTMLDivElement>;
 }
 
-const Projects: FC<Props> = (props) => {
+const ProjectsSection: FC<Props> = (props) => {
   return (
     <>
-      <Spacer size="large" />
-      <StyledSection ref={props.reference} color="black">
+      <StyledSection ref={props.reference}>
+        <Spacer size="large" />
         <SubTitle>Prosjekter</SubTitle>
         <Spacer size="medium" />
         <Carousel
@@ -85,4 +85,4 @@ const Projects: FC<Props> = (props) => {
   );
 };
 
-export default Projects;
+export default ProjectsSection;
