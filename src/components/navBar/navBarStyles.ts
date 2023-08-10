@@ -7,20 +7,22 @@ interface NavBarProps {
 export const NavBarContainer = styled.nav<NavBarProps>`
   position: fixed;
   width: 12rem;
-  height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-left: 0;
+  margin-top: 0;
   border-right: 1px solid #86f591;
-  z-index: 1;
+  z-index: 3;
+  background-color: rgb(30, 30, 30);
 
   @media only screen and (max-width: 800px) {
-    flex: ${(props) => (props.collapsed == true ? "0%" : "50%")};
     display: ${(props) => (props.collapsed == true ? "none" : "flex")};
-    position: fixed;
-    background-color: rgb(30, 30, 30);
+    min-height: 115%;
+    width: 100%;
+    padding-bottom: 10%;
   }
 `;
 
@@ -30,7 +32,7 @@ export const NavFrame = styled.div<NavBarProps>`
   align-items: center;
   justify-content: center;
   width: 10rem;
-  height: 100%;
+  height: 115%;
   margin-left: 0;
 
   @media only screen and (max-width: 800px) {
