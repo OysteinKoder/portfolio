@@ -1,4 +1,4 @@
-import { useRef, FC } from "react";
+import { useRef, FC, useEffect, useMemo } from "react";
 import emailjs from "@emailjs/browser";
 import {
   StyledForm,
@@ -12,10 +12,11 @@ import { useState } from "react";
 import { GoCheck } from "react-icons/go";
 
 interface Props {
-  reference: React.RefObject<HTMLDivElement>;
+  reference: any;
 }
 
 export const ContactSection: FC<Props> = (props) => {
+  const [isVisible, setIsVisible] = useState<boolean>(false);
   const form: any = useRef();
 
   const [emailState, setEmailState] = useState(Boolean);
@@ -41,10 +42,24 @@ export const ContactSection: FC<Props> = (props) => {
     e.target.reset();
   };
 
+  const observer = useMemo(
+    () =>
+      new IntersectionObserver(([entry]) => setIsVisible(entry.isIntersecting)),
+    [props.reference]
+  );
+
+  useEffect(() => {
+    observer.observe(props.reference.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <Spacer size="large" />
-      <StyledSection ref={props.reference}>
+      <StyledSection
+        ref={props.reference}
+        className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
+      >
         <SubTitle>Ta Kontakt</SubTitle>
         <Spacer size="medium" />
         <Wrapper leftOnMobile={false} direction="column" margin="auto">
