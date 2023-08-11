@@ -12,23 +12,28 @@ import { SidebarFrame } from "../components/sideBar/navBarStyles";
 
 import { Main, Wrapper } from "../components/uiHelpers/uiHelpers";
 
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { CollapsedContext } from "../context/globalContext";
 
 import { cardContent } from "./cardContent/cardContent";
 
-import { useRef } from "react";
+import { useRef, FC } from "react";
 
 import { ContactSection } from "../components/ContactSection";
+
 import ExperianceSection from "../components/ExperianceSection";
 
-function LandingPage() {
+const LandingPage: FC = () => {
+  const [isVisible, setVisible] = useState(false);
+
   const { isCollapsed } = useContext(CollapsedContext);
+
+  const domRef = useRef<HTMLDivElement>(null);
 
   const profileRef = useRef<HTMLDivElement>(null);
 
-  const experianceRef = useRef<HTMLDivElement>(null);
+  const experienceRef = useRef<HTMLDivElement>(null);
 
   const carouselRef = useRef<HTMLDivElement>(null);
 
@@ -40,7 +45,7 @@ function LandingPage() {
         <SidebarFrame collapsed={isCollapsed} />
         <Sidebar
           isCollapsed={isCollapsed}
-          experienceRef={experianceRef}
+          experienceRef={experienceRef}
           projectsRef={carouselRef}
           profileRef={profileRef}
           contactRef={contactRef}
@@ -48,13 +53,13 @@ function LandingPage() {
         <Main collapsed={isCollapsed}>
           <Hamburger />
           <ProfileSection props={cardContent} reference={profileRef} />
-          <ExperianceSection reference={experianceRef} />
+          <ExperianceSection reference={experienceRef} />
           <ProjectsSection reference={carouselRef} />
           <ContactSection reference={contactRef} />
         </Main>
       </Wrapper>
     </>
   );
-}
+};
 
 export default LandingPage;

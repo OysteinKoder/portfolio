@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useMemo, useState } from "react";
 import { StyledImage, StyledLink } from "./common";
 import learnCode2 from "../assets/learnCode2.jpg";
 import jobloopImg from "../assets/jobloop_img.png";
@@ -47,14 +47,30 @@ const projects: ProjectsProps = {
 };
 
 interface Props {
-  reference: React.RefObject<HTMLDivElement>;
+  reference: any;
 }
 
 const ProjectsSection: FC<Props> = (props) => {
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+
+  const observer = useMemo(
+    () =>
+      new IntersectionObserver(([entry]) => setIsVisible(entry.isIntersecting)),
+    [props.reference]
+  );
+
+  useEffect(() => {
+    observer.observe(props.reference.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
-      <StyledSection ref={props.reference}>
-        <Spacer size="large" />
+      <StyledSection
+        ref={props.reference}
+        className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
+      >
+        <Spacer size="medium" />
         <SubTitle>Prosjekter</SubTitle>
         <Spacer size="medium" />
         <Carousel

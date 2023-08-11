@@ -10,9 +10,8 @@ export const GlobalStyle = createGlobalStyle`
 
 html {
   margin: 0 auto;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inconsolata', monospace;
 
-  text-align: center;
   line-height: 1.5;
   
   color-scheme: light dark;
@@ -24,6 +23,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  text-align: left;
 }
 
 body {
@@ -40,6 +40,12 @@ main {
 
 h1 {
   line-height: 1.1;
+  font-family: 'Karla', sans-serif;
+}
+
+h2 {
+  font-family: 'Karla', sans-serif;
+  text-align: center;
 }
 
 a {
@@ -50,6 +56,12 @@ a {
 
 p {
 color: #86F591;
+}
+
+i {
+  font-family: 'Inconsolata', monospace;
+  font-style: italic;
+  font-weight: 200;
 }
 
 /* @media (prefers-color-scheme: light) {
@@ -65,12 +77,15 @@ color: #86F591;
   }
 } */
 
-
 // Styling for the react-icons dependency
 
 .nav-icons {
   font-size: 1.5rem;
   vertical-align: text-bottom;
+}
+
+.testCss {
+  background-color: magenta;
 }
 
 .social-media-icons {
@@ -80,6 +95,21 @@ color: #86F591;
 :focus {
   outline: solid white;
 }
+
+// animations
+
+.fade-in-section {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
 
 @media screen and (min-width: 2440px) {
   html {

@@ -1,16 +1,31 @@
-import ProfileSection from "./ProfileSection";
-import { SpanItalic, TextBox } from "./experiance_section/styles";
-import { Spacer, StyledSection, Wrapper } from "./uiHelpers/uiHelpers";
-import { FC } from "react";
+import { TextBox } from "./experiance_section/styles";
+import { Spacer, StyledSection } from "./uiHelpers/uiHelpers";
+import { FC, useEffect, useMemo, useState } from "react";
 
 interface Props {
-  reference: React.RefObject<HTMLDivElement>;
+  reference: any;
 }
 
 const ExperianceSection: FC<Props> = (props) => {
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+
+  const observer = useMemo(
+    () =>
+      new IntersectionObserver(([entry]) => setIsVisible(entry.isIntersecting)),
+    [props.reference]
+  );
+
+  useEffect(() => {
+    observer.observe(props.reference.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
-      <StyledSection ref={props.reference}>
+      <StyledSection
+        ref={props.reference}
+        className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
+      >
         <Spacer size="medium" />
         <h2>Erfaring</h2>
         <Spacer size="medium" />
