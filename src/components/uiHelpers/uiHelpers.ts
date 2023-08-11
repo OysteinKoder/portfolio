@@ -85,7 +85,7 @@ export const StyledSection = styled.section<StyledSectionProps>`
     props.color == "black" ? "rgb(25, 25, 25)" : "null"};
   border-radius: 3px;
   padding: 5rem 10% 5rem 10%;
-
+  border-top: 1px solid #86f591;
   @media only screen and (max-width: 480px) {
     padding: 1rem 1rem;
   }

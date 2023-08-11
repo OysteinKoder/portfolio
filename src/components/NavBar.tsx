@@ -3,7 +3,7 @@ import {
   NavBarContainer,
   SocialMediaContainer,
   SocialMediaLink,
-} from "./navBar/navBarStyles";
+} from "./sideBar/navBarStyles";
 import { Button } from "./Button";
 import { CollapsedContext } from "../context/globalContext";
 import { useContext } from "react";
@@ -14,23 +14,31 @@ import {
   AiFillMail,
 } from "react-icons/ai";
 import { AiFillFolder } from "react-icons/ai";
+import { GoBriefcase } from "react-icons/go";
 
 interface NavBarContainerProps {
   isCollapsed: boolean;
   profileRef: React.RefObject<HTMLDivElement>;
   projectsRef: React.RefObject<HTMLDivElement>;
   contactRef: React.RefObject<HTMLDivElement>;
+  experienceRef: React.RefObject<HTMLDivElement>;
 }
 
-const Nav: FC<NavBarContainerProps> = ({
+const Sidebar: FC<NavBarContainerProps> = ({
   projectsRef: projectsRef,
   profileRef: profileRef,
   contactRef: contactRef,
+  experienceRef: experienceRef,
 }) => {
   const { toggleCollapsed, isCollapsed } = useContext(CollapsedContext);
 
   const toProfile = () => {
     profileRef.current?.scrollIntoView({ behavior: "smooth" });
+    toggleCollapsed();
+  };
+
+  const toExperiance = () => {
+    experienceRef.current?.scrollIntoView({ behavior: "smooth" });
     toggleCollapsed();
   };
 
@@ -54,6 +62,14 @@ const Nav: FC<NavBarContainerProps> = ({
         aria-selected="true"
       >
         Om Meg <AiFillHome className="nav-icons" />
+      </Button>
+      <Button
+        onClick={toExperiance}
+        aria-label="to profile section"
+        role="tab"
+        aria-selected="true"
+      >
+        Erfaring <GoBriefcase className="nav-icons" />
       </Button>
       <Button onClick={toProjects} aria-label="to projects section">
         Prosjekter <AiFillFolder className="nav-icons" />
@@ -83,4 +99,4 @@ const Nav: FC<NavBarContainerProps> = ({
   );
 };
 
-export default Nav;
+export default Sidebar;

@@ -26,7 +26,7 @@ export const NavBarContainer = styled.nav<NavBarProps>`
   }
 `;
 
-export const NavFrame = styled.div<NavBarProps>`
+export const SidebarFrame = styled.div<NavBarProps>`
   display: flex;
   flex-direction: column;
   align-items: center;

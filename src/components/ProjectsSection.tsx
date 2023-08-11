@@ -1,11 +1,11 @@
-import { FC } from "react";
+import { FC, useEffect, useMemo, useState } from "react";
 import { StyledImage, StyledLink } from "./common";
 import learnCode2 from "../assets/learnCode2.jpg";
 import jobloopImg from "../assets/jobloop_img.png";
 import gptBible from "../assets/gpt_bible.jpg";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { SubTitle } from "./cardProfile/cardStyles";
+import { SubTitle } from "./profileSection/cardStyles";
 import { GoLinkExternal } from "react-icons/go";
 import { Spacer, StyledSection } from "./uiHelpers/uiHelpers";
 
@@ -47,14 +47,30 @@ const projects: ProjectsProps = {
 };
 
 interface Props {
-  reference: React.RefObject<HTMLDivElement>;
+  reference: any;
 }
 
-const Projects: FC<Props> = (props) => {
+const ProjectsSection: FC<Props> = (props) => {
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+
+  const observer = useMemo(
+    () =>
+      new IntersectionObserver(([entry]) => setIsVisible(entry.isIntersecting)),
+    [props.reference]
+  );
+
+  useEffect(() => {
+    observer.observe(props.reference.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
-      <Spacer size="large" />
-      <StyledSection ref={props.reference} color="black">
+      <StyledSection
+        ref={props.reference}
+        className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
+      >
+        <Spacer size="medium" />
         <SubTitle>Prosjekter</SubTitle>
         <Spacer size="medium" />
         <Carousel
@@ -85,4 +101,4 @@ const Projects: FC<Props> = (props) => {
   );
 };
 
-export default Projects;
+export default ProjectsSection;
