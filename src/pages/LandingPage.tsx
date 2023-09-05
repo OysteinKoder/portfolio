@@ -12,7 +12,7 @@ import { SidebarFrame } from "../components/sideBar/navBarStyles";
 
 import { Main, Wrapper } from "../components/uiHelpers/uiHelpers";
 
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 
 import { CollapsedContext } from "../context/globalContext";
 
@@ -22,14 +22,10 @@ import { useRef, FC } from "react";
 
 import { ContactSection } from "../components/ContactSection";
 
-import ExperianceSection from "../components/ExperianceSection";
+import ExperienceSection from "../components/ExperianceSection";
 
 const LandingPage: FC = () => {
-  const [isVisible, setVisible] = useState(false);
-
   const { isCollapsed } = useContext(CollapsedContext);
-
-  const domRef = useRef<HTMLDivElement>(null);
 
   const profileRef = useRef<HTMLDivElement>(null);
 
@@ -53,7 +49,7 @@ const LandingPage: FC = () => {
         <Main collapsed={isCollapsed}>
           <Hamburger />
           <ProfileSection props={cardContent} reference={profileRef} />
-          <ExperianceSection reference={experienceRef} />
+          <ExperienceSection reference={experienceRef} />
           <ProjectsSection reference={carouselRef} />
           <ContactSection reference={contactRef} />
         </Main>
