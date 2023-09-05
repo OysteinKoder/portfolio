@@ -5,7 +5,7 @@ import {
   StyledCardImage,
   StyledTechP,
 } from "./profileSection/cardStyles";
-import { FC, useEffect, useMemo, useRef, useState } from "react";
+import { FC, useEffect, useMemo, useState } from "react";
 import { Spacer, Wrapper } from "./uiHelpers/uiHelpers";
 
 // This is a card component that can be used to display information in a card format.
