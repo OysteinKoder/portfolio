@@ -6,7 +6,7 @@ interface Props {
   reference: any;
 }
 
-const ExperianceSection: FC<Props> = (props) => {
+const ExperienceSection: FC<Props> = (props) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const observer = useMemo(
@@ -37,11 +37,19 @@ const ExperianceSection: FC<Props> = (props) => {
           <i>Mars 2022 - Nåværende</i>
           <br />
           <p>
-            I Kodehode trener vi opp lovende tallenter i frontend utvikling over
-            en periode på et år. I de første seks månedene lærer deltagerne
+            I Kodehode trener vi opp lovende tallenter i webutvikling over en
+            periode på et år. I de første seks månedene lærer deltagerne
             frontend faget, og i de resterende månedene får de praksis hos
-            diverse bedrifter.
+            diverse bedrifter. For det meste underviser jeg i React.js
           </p>
+          <i>Verktøy</i>
+          <ul>
+            <li>Css, Html, JavaScript</li>
+            <li>React.js</li>
+            <li>Styled-components</li>
+            <li>Google Classroom</li>
+            <li>Git, github</li>
+          </ul>
         </TextBox>
         <Spacer size="medium" />
         <TextBox>
@@ -51,15 +59,26 @@ const ExperianceSection: FC<Props> = (props) => {
           <i>Oktober 2021 - mars 2022</i>
           <br />
           <p>
-            Hos Dnb arbeidet jeg som junior-utvikler på deres nye
-            bedriftsportal. Oppgaven jeg fikk var å utvikle en underside som
-            informerer og videresender brukeren til diverse moduler i deres
-            kommunikasjonspakke for bedrifter.
+            Hos DNB arbeidet jeg som juniorutvikler på deres nye bedriftsportal.
+            Oppgaven jeg fikk var å utvikle en underside som informerer og
+            videresender brukeren til diverse moduler i deres
+            kommunikasjonspakke for bedrifter. Det modulene har til felles er at
+            de handler om pensjon og at de informerer om DNB sine forskjellige
+            læringsverktøy angående dette.
           </p>
+          <i>Verktøy</i>
+          <ul>
+            <li>Css, Html, JavaScript</li>
+            <li>React.js</li>
+            <li>Redux</li>
+            <li>Eufemia, Dnb's komponentbibliotek</li>
+            <li>Git, Bitbucket</li>
+            <li>Jira</li>
+          </ul>
         </TextBox>
       </StyledSection>
     </>
   );
 };
 
-export default ExperianceSection;
+export default ExperienceSection;
