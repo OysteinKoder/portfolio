@@ -37,7 +37,7 @@ const Sidebar: FC<NavBarContainerProps> = ({
     toggleCollapsed();
   };
 
-  const toExperiance = () => {
+  const toExperience = () => {
     experienceRef.current?.scrollIntoView({ behavior: "smooth" });
     toggleCollapsed();
   };
@@ -45,7 +45,6 @@ const Sidebar: FC<NavBarContainerProps> = ({
   const toProjects = () => {
     projectsRef.current?.scrollIntoView({ behavior: "smooth" });
     toggleCollapsed();
-    console.log("hey");
   };
 
   const toContact = () => {
@@ -64,7 +63,7 @@ const Sidebar: FC<NavBarContainerProps> = ({
         Om Meg <AiFillHome className="nav-icons" />
       </Button>
       <Button
-        onClick={toExperiance}
+        onClick={toExperience}
         aria-label="to profile section"
         role="tab"
         aria-selected="true"
