@@ -46,9 +46,9 @@ const projects: ProjectsProps = {
   ],
 };
 
-interface Props {
+type Props = {
   reference: any;
-}
+};
 
 const ProjectsSection: FC<Props> = (props) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);

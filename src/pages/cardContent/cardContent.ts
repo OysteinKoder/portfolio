@@ -2,7 +2,7 @@ import profileImage from "../../assets/Profilbilde_Øystein.jpg";
 
 interface ICard {
   variant: string;
-  topLeftImage?: any;
+  topLeftImage?: string;
   topRightTitle?: string;
   topRightText?: string;
   bottomLeftTitle?: string;

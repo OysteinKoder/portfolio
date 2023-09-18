@@ -12,9 +12,9 @@ interface FlexProps {
   leftOnMobile?: boolean;
 }
 
-interface MainContentProps {
+type MainContentProps = {
   collapsed: boolean;
-}
+};
 
 export const Wrapper = styled.div<FlexProps>`
   display: flex;

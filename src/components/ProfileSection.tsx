@@ -37,7 +37,7 @@ const exploringSkills = {
   tech: ["C#", "Vue.js", ".Net Core", "Tailwind", "Sql"],
 };
 
-interface CardProps {
+type CardProps = {
   props: any;
   topLeftImage?: string;
   topLeftImageAlt?: string;
@@ -48,7 +48,7 @@ interface CardProps {
   bottomRightTitle?: string;
   bottomRightList?: string;
   reference: any;
-}
+};
 
 const ProfileSection: FC<CardProps> = ({ props: props, reference }) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);

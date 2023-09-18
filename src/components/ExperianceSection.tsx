@@ -2,9 +2,9 @@ import { TextBox } from "./experiance_section/styles";
 import { Spacer, StyledSection } from "./uiHelpers/uiHelpers";
 import { FC, useEffect, useMemo, useState } from "react";
 
-interface Props {
+type Props = {
   reference: any;
-}
+};
 
 const ExperienceSection: FC<Props> = (props) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);

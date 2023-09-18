@@ -11,18 +11,17 @@ import { Wrapper, Spacer, StyledSection } from "./uiHelpers/uiHelpers";
 import { useState } from "react";
 import { GoCheck } from "react-icons/go";
 
-interface Props {
+type Props = {
   reference: any;
-}
+};
 
 export const ContactSection: FC<Props> = (props) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
-  const form: any = useRef();
+  const form = useRef<HTMLFormElement>(null!);
 
   const [emailState, setEmailState] = useState(Boolean);
   const sendEmail = (e: { preventDefault: () => void; target: any }) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         "service_p0ljkrp",
@@ -50,6 +49,7 @@ export const ContactSection: FC<Props> = (props) => {
 
   useEffect(() => {
     observer.observe(props.reference.current);
+    console.log(typeof props.reference.current);
     return () => observer.disconnect();
   }, []);
 

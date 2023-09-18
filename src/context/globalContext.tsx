@@ -1,9 +1,9 @@
 import { createContext } from "react";
 
-interface CollapsedContextProps {
+type CollapsedContextProps = {
   isCollapsed: boolean;
   toggleCollapsed: () => void;
-}
+};
 
 export const CollapsedContext = createContext<CollapsedContextProps>({
   isCollapsed: false,

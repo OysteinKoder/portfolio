@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-interface NavBarProps {
+type NavBarProps = {
   collapsed: boolean;
-}
+};
 
 export const NavBarContainer = styled.nav<NavBarProps>`
   position: fixed;
