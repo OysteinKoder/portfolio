@@ -1,4 +1,3 @@
-import { FC } from "react";
 import {
   NavBarContainer,
   SocialMediaContainer,
@@ -16,20 +15,20 @@ import {
 import { AiFillFolder } from "react-icons/ai";
 import { GoBriefcase } from "react-icons/go";
 
-interface NavBarContainerProps {
+type NavBarContainerProps = {
   isCollapsed: boolean;
   profileRef: React.RefObject<HTMLDivElement>;
   projectsRef: React.RefObject<HTMLDivElement>;
   contactRef: React.RefObject<HTMLDivElement>;
   experienceRef: React.RefObject<HTMLDivElement>;
-}
+};
 
-const Sidebar: FC<NavBarContainerProps> = ({
-  projectsRef: projectsRef,
-  profileRef: profileRef,
-  contactRef: contactRef,
-  experienceRef: experienceRef,
-}) => {
+const Sidebar = ({
+  projectsRef,
+  profileRef,
+  contactRef,
+  experienceRef,
+}: NavBarContainerProps) => {
   const { toggleCollapsed, isCollapsed } = useContext(CollapsedContext);
 
   const toProfile = () => {

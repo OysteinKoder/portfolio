@@ -5,7 +5,7 @@ import {
   StyledCardImage,
   StyledTechP,
 } from "./profileSection/cardStyles";
-import { FC, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Spacer, Wrapper } from "./uiHelpers/uiHelpers";
 
 // This is a card component that can be used to display information in a card format.
@@ -50,7 +50,7 @@ type CardProps = {
   reference: any;
 };
 
-const ProfileSection: FC<CardProps> = ({ props: props, reference }) => {
+const ProfileSection = ({ props, topLeftImageAlt, reference }: CardProps) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const observer = useMemo(
@@ -70,7 +70,7 @@ const ProfileSection: FC<CardProps> = ({ props: props, reference }) => {
         ref={reference}
         className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
       >
-        <StyledCardImage src={props.topLeftImage} alt={props.topLeftImageAlt} />
+        <StyledCardImage src={props.topLeftImage} alt={topLeftImageAlt} />
         <CardSection>
           <CardTitle>{props.topRightTitle}</CardTitle>
           <p>{props.topRightText}</p>

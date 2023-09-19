@@ -1,4 +1,4 @@
-import { useRef, FC, useEffect, useMemo } from "react";
+import { useRef, useEffect, useMemo } from "react";
 import emailjs from "@emailjs/browser";
 import {
   StyledForm,
@@ -15,7 +15,7 @@ type Props = {
   reference: any;
 };
 
-export const ContactSection: FC<Props> = (props) => {
+export const ContactSection = ({ reference }: Props) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const form = useRef<HTMLFormElement>(null!);
 
@@ -44,12 +44,12 @@ export const ContactSection: FC<Props> = (props) => {
   const observer = useMemo(
     () =>
       new IntersectionObserver(([entry]) => setIsVisible(entry.isIntersecting)),
-    [props.reference]
+    [reference]
   );
 
   useEffect(() => {
-    observer.observe(props.reference.current);
-    console.log(typeof props.reference.current);
+    observer.observe(reference.current);
+    console.log(typeof reference.current);
     return () => observer.disconnect();
   }, []);
 
@@ -57,7 +57,7 @@ export const ContactSection: FC<Props> = (props) => {
     <>
       <Spacer size="large" />
       <StyledSection
-        ref={props.reference}
+        ref={reference}
         className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
       >
         <SubTitle>Ta Kontakt</SubTitle>

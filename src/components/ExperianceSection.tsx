@@ -1,29 +1,29 @@
 import { TextBox } from "./experiance_section/styles";
 import { Spacer, StyledSection } from "./uiHelpers/uiHelpers";
-import { FC, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type Props = {
   reference: any;
 };
 
-const ExperienceSection: FC<Props> = (props) => {
+const ExperienceSection = ({ reference }: Props) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const observer = useMemo(
     () =>
       new IntersectionObserver(([entry]) => setIsVisible(entry.isIntersecting)),
-    [props.reference]
+    [reference]
   );
 
   useEffect(() => {
-    observer.observe(props.reference.current);
+    observer.observe(reference.current);
     return () => observer.disconnect();
   }, []);
 
   return (
     <>
       <StyledSection
-        ref={props.reference}
+        ref={reference}
         className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
       >
         <Spacer size="medium" />
