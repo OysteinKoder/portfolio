@@ -7,7 +7,8 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { SubTitle } from "./profileSection/cardStyles";
 import { GoLinkExternal } from "react-icons/go";
-import { Spacer, StyledSection } from "./uiHelpers/uiHelpers";
+import { Spacer, StyledSection, Wrapper } from "./uiHelpers/uiHelpers";
+import { Container, ProjectImage } from "./projectSection/styles";
 
 interface ProjectsProps {
   projects: {
@@ -70,32 +71,48 @@ const ProjectsSection = ({ reference }: Props) => {
         ref={reference}
         className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
       >
+        <h2>Prosjekter</h2>
         <Spacer size="medium" />
-        <SubTitle>Prosjekter</SubTitle>
+        <Container>
+          <h3>Learn React Repo</h3>
+          <Spacer size="small" />
+          <ProjectImage src={learnCode2} alt="Computer with code on screen" />
+          <Spacer size="small" />
+          <p>
+            Dette
+            <a
+              href="https://github.com/OysteinKoder/react-lessons-3.0"
+              title="link to learn react repo"
+              rel="external"
+              target="_blank"
+            >
+              {" "}
+              github repoet <GoLinkExternal />{" "}
+            </a>
+            kan man bruke til å lære seg grunnleggende react med routing, hooks
+            og state management.
+          </p>
+        </Container>
         <Spacer size="medium" />
-        <Carousel
-          showIndicators={false}
-          infiniteLoop={true}
-          autoPlay={true}
-          centerSlidePercentage={60}
-          centerMode={true}
-          swipeable={true}
-          showThumbs={false}
-          showStatus={false}
-        >
-          {projects.projects.map((project, idx) => {
-            return (
-              <div key={idx}>
-                <StyledImage src={project.image} alt="placeholder" />
-                <p>
-                  <StyledLink href={project.link}>
-                    {project.text} <GoLinkExternal />
-                  </StyledLink>
-                </p>
-              </div>
-            );
-          })}
-        </Carousel>
+        <Container>
+          <h3>Jobloop nettside</h3>
+          <Spacer size="small" />
+          <ProjectImage src={jobloopImg} alt="jobloop logo" />
+          <Spacer size="small" />
+          <p>
+            Drifting og vedlikehold av
+            <a
+              href="https://jobloop.no/"
+              title="jobloop.no link"
+              rel="external"
+              target="_blank"
+            >
+              {" "}
+              jobloop <GoLinkExternal />{" "}
+            </a>
+            sin nettside.
+          </p>
+        </Container>
       </StyledSection>
     </>
   );
