@@ -1,4 +1,4 @@
-import { TextBox } from "./experiance_section/styles";
+import { TextBox } from "./experianceSection/styles";
 import { Spacer, StyledSection } from "./uiHelpers/uiHelpers";
 import { useEffect, useMemo, useState } from "react";
 
@@ -36,19 +36,26 @@ const ExperienceSection = ({ reference }: Props) => {
           <br />
           <i>Mars 2022 - Nåværende</i>
           <br />
+
           <p>
             I Kodehode trener vi opp lovende tallenter i webutvikling over en
-            periode på et år. I de første seks månedene lærer deltagerne
-            frontend faget, og i de resterende månedene får de praksis hos
-            diverse bedrifter. For det meste underviser jeg i React.js
+            periode på ett år. I de første seks månedene lærer deltagerne
+            frontend faget og noe av det siste de går igjennom er react.js. I de
+            resterende månedene får de praksis hos våre samarbeidspartnere.
+            <br />
+            <br />I Jobloop leies jeg også ut som teknisk annsvarlig i et app
+            utviklings prosjekt for fontenehuset. Arbeidsoppgavene mine der går
+            ut på å sikre framdrift av utviklingen og opptrening av nye
+            utviklere i git og scrum metodikken.
           </p>
           <i>Verktøy</i>
           <ul>
-            <li>Css, Html, JavaScript</li>
+            <li>Css, Html, JavaScript, TypeScript</li>
             <li>React.js</li>
             <li>Styled-components</li>
             <li>Google Classroom</li>
             <li>Git, github</li>
+            <li>Scrum</li>
           </ul>
         </TextBox>
         <Spacer size="medium" />

@@ -17,7 +17,7 @@ export const cardContent: ICard = {
   topLeftImage: profileImage,
   topRightTitle: "Hei, jeg heter Øystein.",
   topRightText:
-    "De tre tingene jeg virkelig liker å jobbe med er Typescript, React og design. For meg er ikke koding bare en jobb, det er også en hobby. I tillegg spiller jeg bass og produserer musikk, og jeg kan også ta noen fine bilder",
+    "De tre tingene jeg virkelig liker å jobbe med er Typescript, React og design. For meg er ikke koding bare en jobb, det er også en hobby. I tillegg spiller jeg bass og produserer musikk.",
   bottomLeftTitle: "Ferdigheter",
   bottomLeftText: [
     "TypeScript ❤️",
