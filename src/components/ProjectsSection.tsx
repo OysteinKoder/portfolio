@@ -1,13 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
-import { StyledImage, StyledLink } from "./common";
 import learnCode2 from "../assets/learnCode2.jpg";
 import jobloopImg from "../assets/jobloop_img.png";
 import gptBible from "../assets/gpt_bible.jpg";
-import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { SubTitle } from "./profileSection/cardStyles";
 import { GoLinkExternal } from "react-icons/go";
-import { Spacer, StyledSection, Wrapper } from "./uiHelpers/uiHelpers";
+import { Spacer, StyledSection } from "./uiHelpers/uiHelpers";
 import { Container, ProjectImage, StyledP } from "./projectSection/styles";
 
 interface ProjectsProps {
