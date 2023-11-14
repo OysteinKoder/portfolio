@@ -1,0 +1,7 @@
+ Refactor the code
+- Change filenames and folder structure to make more sense
+- Get all the text into an object containing the text for each section
+- Perhaps use i18n for this in the future.
+- Use the string variable to render the sections
+
+

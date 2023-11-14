@@ -51,6 +51,7 @@ h2 {
 a {
   font-weight: 500;
   text-decoration: inherit;
+  color: #c7fccd;
 }
 
 

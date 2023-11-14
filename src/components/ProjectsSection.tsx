@@ -8,7 +8,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { SubTitle } from "./profileSection/cardStyles";
 import { GoLinkExternal } from "react-icons/go";
 import { Spacer, StyledSection, Wrapper } from "./uiHelpers/uiHelpers";
-import { Container, ProjectImage } from "./projectSection/styles";
+import { Container, ProjectImage, StyledP } from "./projectSection/styles";
 
 interface ProjectsProps {
   projects: {
@@ -78,7 +78,7 @@ const ProjectsSection = ({ reference }: Props) => {
           <Spacer size="small" />
           <ProjectImage src={learnCode2} alt="Computer with code on screen" />
           <Spacer size="small" />
-          <p>
+          <StyledP>
             Dette
             <a
               href="https://github.com/OysteinKoder/react-lessons-3.0"
@@ -91,7 +91,7 @@ const ProjectsSection = ({ reference }: Props) => {
             </a>
             kan man bruke til å lære seg grunnleggende react med routing, hooks
             og state management.
-          </p>
+          </StyledP>
         </Container>
         <Spacer size="medium" />
         <Container>
@@ -99,7 +99,7 @@ const ProjectsSection = ({ reference }: Props) => {
           <Spacer size="small" />
           <ProjectImage src={jobloopImg} alt="jobloop logo" />
           <Spacer size="small" />
-          <p>
+          <StyledP>
             Drifting og vedlikehold av
             <a
               href="https://jobloop.no/"
@@ -111,7 +111,7 @@ const ProjectsSection = ({ reference }: Props) => {
               jobloop <GoLinkExternal />{" "}
             </a>
             sin nettside.
-          </p>
+          </StyledP>
         </Container>
       </StyledSection>
     </>

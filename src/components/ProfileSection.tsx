@@ -34,7 +34,7 @@ const skills = {
 };
 const exploringSkills = {
   colors: ["#9aebff", "#a4f4c4", "#faf4a4", "#f78db3", "#b68fff"],
-  tech: ["C#", "Vue.js", ".Net Core", "Tailwind", "Sql"],
+  tech: ["C#", "# Next", ".Net Core", "Tailwind", "Sql"],
 };
 
 type CardProps = {
