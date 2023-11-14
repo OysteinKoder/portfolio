@@ -1,48 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 import learnCode2 from "../assets/learnCode2.jpg";
 import jobloopImg from "../assets/jobloop_img.png";
-import gptBible from "../assets/gpt_bible.jpg";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { GoLinkExternal } from "react-icons/go";
 import { Spacer, StyledSection } from "./uiHelpers/uiHelpers";
 import { Container, ProjectImage, StyledP } from "./projectSection/styles";
-
-interface ProjectsProps {
-  projects: {
-    image: string;
-    alt: string;
-    text: string;
-    link: string;
-    ariaLabel: string;
-  }[];
-}
-
-// To add new project to carousel, add new object to projects array.
-const projects: ProjectsProps = {
-  projects: [
-    {
-      image: learnCode2,
-      alt: "Computer with code on screen",
-      text: "Learn React",
-      link: "https://github.com/OysteinKoder/react_lessons",
-      ariaLabel: "Link to github repo",
-    },
-    {
-      image: gptBible,
-      alt: "Ai reading a bible",
-      text: "Teen GPT Bible",
-      link: "https://github.com/OysteinKoder/react_lessons",
-      ariaLabel: "Link to github repo",
-    },
-    {
-      image: jobloopImg,
-      alt: "Jobloop icon",
-      text: "Jobloop Website",
-      link: "https://jobloop.no/",
-      ariaLabel: "Link to jobloop.no",
-    },
-  ],
-};
 
 type Props = {
   reference: any;
