@@ -50,9 +50,9 @@ const ProjectsSection = ({ reference }: Props) => {
               Fake Store <GoLinkExternal />{" "}
             </a>
             er en nettbutikk som benytter seg av Next.js, typescript og sanity
-            cms for å hente produkter. Med sanity cms kan jeg gi en egen
-            innlogging til produkteier slik at de kan legge til produkter selv
-            på en enkel måte som ikke krever koding.
+            cms for å hente produkter. Med sanity cms kan eieren av nettsiden få
+            en egen innlogging til å legge til, endre og slette produkter på en
+            enkel måte som ikke krever koding.
           </StyledP>
         </Container>
         <Spacer size="medium" />
